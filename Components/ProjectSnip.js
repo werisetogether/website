@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import "tailwindcss/tailwind.css";
 
 const ProjectSnip = () => {
   return (
