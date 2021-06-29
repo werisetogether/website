@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Layout from '../Components/Layout';
 import Header from '../Components/Header';
 import ProjectSnip from '../Components/ProjectSnip';
+import About from '../Components/AboutSnip';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
           <Layout>
             <Header />
             <ProjectSnip />
+            <About />
           </Layout>
         </main>
       </div>
