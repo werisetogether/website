@@ -17,10 +17,10 @@ const Header = () => {
           objectFit="cover"
         />
       </div>
-      <div className="pt-12 max-w-4xl mx-auto">
+      <div className="mt-7 sm:mt-12 max-w-4xl mx-auto">
         <div>
-          <h1 className="text-5xl font-bold">We Rise Together</h1>
-          <p className="text-2xl font-medium mt-10 leading-10 tracking-normal">
+          <h1 className="text-2xl sm:text-5xl font-bold">We Rise Together</h1>
+          <p className="text-lg sm:text-2xl font-medium mt-5 sm:mt-10 leading-10 tracking-normal">
             <RoughNotationGroup show={true}>
               We work towards{" "}
               <RoughNotation
@@ -66,9 +66,9 @@ const Header = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 1 }}
               transition={{ duration: 0.1 }}
-              className="col-span-2"
+              className="col-span-4 sm:col-span-2"
             >
-              <button className="focus:outline-none mr-2 bg-redBtn rounded-xl px-8 py-4 text-xl font-semibold flex justify-center w-full h-full items-center">
+              <button className="focus:outline-none mr-2 bg-redBtn rounded-xl px-8 py-4 text-lg sm:text-xl font-semibold flex justify-center w-full h-full items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
@@ -95,7 +95,7 @@ const Header = () => {
           dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
           dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
           dragElastic={0.5}
-          className="py-24"
+          className="py-14 sm:py-24"
         >
           <div className="">
             <h1 className="text-8xl text-center">+</h1>

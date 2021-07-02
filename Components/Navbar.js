@@ -40,7 +40,10 @@ export default function Navbar() {
                     </a>
                   </Link>
                   <Link href="/">
-                    <a className="hidden font-semibold lg:inline-flex" rel="noreferrer">
+                    <a
+                      className="hidden font-semibold lg:inline-flex"
+                      rel="noreferrer"
+                    >
                       We Rise Together
                     </a>
                   </Link>
@@ -82,7 +85,7 @@ export default function Navbar() {
                       className="block text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-4 rounded-md text-sm font-medium"
                       rel="noreferrer"
                     >
-                      Produk
+                      Projects
                     </a>
                   </Link>
                 </Menu.Item>
@@ -92,7 +95,17 @@ export default function Navbar() {
                       className="block text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-4 rounded-md text-sm font-medium"
                       rel="noreferrer"
                     >
-                      Tentang Kami
+                      About
+                    </a>
+                  </Link>
+                </Menu.Item>
+                <Menu.Item>
+                  <Link href="/about">
+                    <a
+                      className="block text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-4 rounded-md text-sm font-medium"
+                      rel="noreferrer"
+                    >
+                      Donate
                     </a>
                   </Link>
                 </Menu.Item>
