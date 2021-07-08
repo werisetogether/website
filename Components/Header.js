@@ -89,18 +89,11 @@ const Header = () => {
           </Link>
         </div>
 
-        <motion.div
-          drag="y"
-          dragDirectionLock
-          dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
-          dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
-          dragElastic={0.5}
-          className="py-14 sm:py-24"
-        >
+        <div className="py-14 sm:py-24">
           <div className="">
             <h1 className="text-8xl text-center">+</h1>
           </div>
-        </motion.div>
+        </div>
       </div>
     </header>
   );
