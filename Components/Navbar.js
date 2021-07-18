@@ -5,13 +5,12 @@ import Link from "next/link";
 import React, { Fragment, useState, useEffect } from "react";
 
 const navigation = [
-  { name: "Projects", href: "/products" },
+  { name: "Projects", href: "/projects" },
   { name: "About", href: "/about" },
-  { name: "Donate", href: "/about" },
+  { name: "Donate", href: "/donate" },
 ];
 
 export default function Navbar() {
-
   return (
     <Menu as="nav" className="sticky z-30 transition ease-out duration-200">
       {({ open }) => (
@@ -51,16 +50,11 @@ export default function Navbar() {
                 <div className="hidden sm:block sm:ml-6 absolute right-0 self-center">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <div className="">
-                        <Link key={item.name} href={item.href}>
-                          <a
-                            className=" text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-semibold"
-                            rel="noreferrer"
-                          >
-                            {item.name}
-                          </a>
-                        </Link>
-                      </div>
+                      <Link key={item.name} href={item.href}>
+                        <a className=" text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-semibold">
+                          {item.name}
+                        </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -79,36 +73,18 @@ export default function Navbar() {
           >
             <Menu.Items className="sm:hidden">
               <div className="origin-top-right absolute w-full p-1 right-0 rounded-b-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-                <Menu.Item className="static">
-                  <Link href="/products">
-                    <a
-                      className="block text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-4 rounded-md text-sm font-medium"
-                      rel="noreferrer"
-                    >
-                      Projects
-                    </a>
-                  </Link>
-                </Menu.Item>
-                <Menu.Item>
-                  <Link href="/about">
-                    <a
-                      className="block text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-4 rounded-md text-sm font-medium"
-                      rel="noreferrer"
-                    >
-                      About
-                    </a>
-                  </Link>
-                </Menu.Item>
-                <Menu.Item>
-                  <Link href="/about">
-                    <a
-                      className="block text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-4 rounded-md text-sm font-medium"
-                      rel="noreferrer"
-                    >
-                      Donate
-                    </a>
-                  </Link>
-                </Menu.Item>
+                {navigation.map((item) => (
+                  <Menu.Item key={item.name} className="static">
+                    <Link href={item.href}>
+                      <a
+                        className="block text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-4 rounded-md text-sm font-medium"
+                        rel="noreferrer"
+                      >
+                        {item.name}
+                      </a>
+                    </Link>
+                  </Menu.Item>
+                ))}
               </div>
             </Menu.Items>
           </Transition>

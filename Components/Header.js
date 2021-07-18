@@ -91,7 +91,7 @@ const Header = () => {
 
         <div className="py-14 sm:py-24">
           <div className="">
-            <h1 className="text-8xl text-center">+</h1>
+            <h1 className="text-6xl sm:text-8xl text-center">+</h1>
           </div>
         </div>
       </div>

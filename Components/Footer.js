@@ -2,12 +2,10 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="max-w-4xl mx-auto mt-24">
-      <Link href="/">
-        <a>
-          <p className="underline text-center">Scroll to top</p>
-        </a>
-      </Link>
+    <footer className="mt-24">
+      <a href="#">
+        <p className="underline text-center">Scroll to top</p>
+      </a>
       <div className="py-8 border-t mt-4 border-gray-200 md:flex md:items-start md:justify-between">
         <div>
           <p className="text-base text-gray-400 mb-2 font-medium">

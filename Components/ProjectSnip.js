@@ -5,13 +5,13 @@ import "tailwindcss/tailwind.css";
 
 const ProjectSnip = () => {
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 items-center">
         <Link href="">
           <a>
-            <div class="bg-gray-300 bg-cover rounded-3xl">
-              <div class="h-96 pl-6 pb-3 flex flex-wrap content-end">
-                <span class="mt-1 text-base sm:text-lg font-bold text-gray-600 dark:text-gray-300">
+            <div className="bg-gray-300 bg-cover rounded-3xl">
+              <div className="h-96 pl-6 pb-3 flex flex-wrap content-end">
+                <span className="mt-1 text-base sm:text-lg font-bold text-gray-600 dark:text-gray-300">
                   #SheHygiene
                 </span>
               </div>
@@ -21,9 +21,9 @@ const ProjectSnip = () => {
 
         <Link href="">
           <a>
-            <div class="bg-gray-300 bg-cover rounded-3xl">
-              <div class="h-96 pl-6 pb-3 flex flex-wrap content-end">
-                <span class="mt-1 text-base sm:text-lg font-bold text-gray-600 dark:text-gray-300">
+            <div className="bg-gray-300 bg-cover rounded-3xl">
+              <div className="h-96 pl-6 pb-3 flex flex-wrap content-end">
+                <span className="mt-1 text-base sm:text-lg font-bold text-gray-600 dark:text-gray-300">
                   #HelpingHands
                 </span>
               </div>
@@ -33,9 +33,9 @@ const ProjectSnip = () => {
 
         <Link href="">
           <a>
-            <div class="bg-gray-300 bg-cover rounded-3xl">
-              <div class="h-96 pl-6 pb-3 flex flex-wrap content-end">
-                <span class="mt-1 text-base sm:text-lg font-bold text-gray-600 dark:text-gray-300">
+            <div className="bg-gray-300 bg-cover rounded-3xl">
+              <div className="h-96 pl-6 pb-3 flex flex-wrap content-end">
+                <span className="mt-1 text-base sm:text-lg font-bold text-gray-600 dark:text-gray-300">
                   #Sunday4SecuredFuture
                 </span>
               </div>
