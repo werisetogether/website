@@ -31,7 +31,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 };
 
@@ -40,15 +40,6 @@ export const getStaticProps = async ({ params }) => {
     content_type: "singleProject",
     "fields.slug": params.slug,
   });
-
-  if (!items.length) {
-    return {
-      redirect: {
-        destination: "/",
-        permanent: false,
-      },
-    };
-  }
 
   return {
     props: { project: items[0] },
