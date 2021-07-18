@@ -60,7 +60,7 @@ const Header = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-5 gap-4 mt-10 w-10/12">
+        <div className="mt-10 sm:w-1/3">
           <Link href="">
             <motion.a
               whileHover={{ scale: 1.05 }}
