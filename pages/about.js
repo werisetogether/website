@@ -24,6 +24,7 @@ export async function getStaticProps() {
   return {
     props: {
       aboutPage: res.items,
+      revalidate: 1,
     },
   };
 }

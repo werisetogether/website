@@ -1,59 +1,52 @@
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import Moment from "react-moment";
 import "tailwindcss/tailwind.css";
 
-const ProjectSnip = () => {
+export default function Projects({ project }) {
+  const { title, slug, date, shortDescription, thumbnail } = project.fields;
   return (
     <div className="">
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 items-center">
-        <Link href="">
-          <a>
-            <div className="bg-gray-300 bg-cover rounded-3xl">
-              <div className="h-96 pl-6 pb-3 flex flex-wrap content-end">
-                <span className="mt-1 text-base sm:text-lg font-bold text-gray-600 dark:text-gray-300">
-                  #SheHygiene
-                </span>
+      <Link key={project.sys.id} project={project} href={"/projects/" + slug}>
+        <a>
+          <Link
+            key={project.sys.id}
+            project={project}
+            href={"/projects/" + slug}
+          >
+            <a>
+              <div className="border-2 border-black hover:bg-gray-100 p-4 rounded-3xl">
+                <div className=" h-48 mb-5 relative">
+                  <Image
+                    src={"https:" + thumbnail.fields.file.url}
+                    className="rounded-2xl"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+                <div className="px-3">
+                  <h3 className="text-sm font-semibold mb-2">
+                    <Moment format="YYYY/MM/DD">{date}</Moment>
+                  </h3>
+                  <h2 className="text-2xl overflow-clip overflow-hidden text-gray-900 font-medium mb-4">
+                    {title}
+                  </h2>
+                  <div className="leading-relaxed text-base pb-2">
+                    {shortDescription}
+                  </div>
+                </div>
               </div>
-            </div>
-          </a>
-        </Link>
+            </a>
+          </Link>
+        </a>
+      </Link>
 
-        <Link href="">
-          <a>
-            <div className="bg-gray-300 bg-cover rounded-3xl">
-              <div className="h-96 pl-6 pb-3 flex flex-wrap content-end">
-                <span className="mt-1 text-base sm:text-lg font-bold text-gray-600 dark:text-gray-300">
-                  #HelpingHands
-                </span>
-              </div>
-            </div>
-          </a>
-        </Link>
-
-        <Link href="">
-          <a>
-            <div className="bg-gray-300 bg-cover rounded-3xl">
-              <div className="h-96 pl-6 pb-3 flex flex-wrap content-end">
-                <span className="mt-1 text-base sm:text-lg font-bold text-gray-600 dark:text-gray-300">
-                  #Sunday4SecuredFuture
-                </span>
-              </div>
-            </div>
-          </a>
-        </Link>
-
-        <Link href="">
-          <a className="sm:col-span-3">
-            <button className="focus:outline-none border-2 border-black rounded-xl px-8 py-4 text-lg sm:text-xl font-semibold flex justify-center w-full h-full items-center">
-              Learn more
-            </button>
-          </a>
-        </Link>
-      </div>
-      <div></div>
+      <style jsx>{`
+        .bg-image {
+          background-image: url(${"https:" + thumbnail.fields.file.url});
+          background-position: center;
+        }
+      `}</style>
     </div>
   );
-};
-
-export default ProjectSnip;
+}

@@ -5,6 +5,7 @@ import ProjectSnip from '../Components/ProjectSnip';
 import AboutSnip from '../Components/AboutSnip';
 import DonateSnip from '../Components/DonateSnip';
 import { createClient } from "contentful";
+import Link from "next/link";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -12,16 +13,21 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   });
 
-  const res = await client.getEntries({ content_type: "homepageAbout" });
+  const abouts = await client.getEntries({ content_type: "homepageAbout" });
+  const projects = await client.getEntries({
+    content_type: "singleProject",
+    limit: 2,
+  });
 
   return {
     props: {
-      abouts: res.items,
+      abouts: abouts.items,
+      projects: projects.items,
     },
   };
 }
 
-export default function Home({ abouts }) {
+export default function Home({ abouts, projects }) {
   return (
     <div>
       <div>
@@ -34,7 +40,18 @@ export default function Home({ abouts }) {
           <Layout>
             <Header />
             <div className="max-w-4xl mx-auto">
-              <ProjectSnip />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 items-center">
+                {projects.map((project) => (
+                  <ProjectSnip key={project.sys.id} project={project} />
+                ))}
+                <Link href="/projects">
+                  <a className="sm:col-span-3">
+                    <button className="focus:outline-none border-2 border-black rounded-xl px-8 py-4 text-lg sm:text-xl font-semibold flex justify-center w-full h-full items-center">
+                      Learn more
+                    </button>
+                  </a>
+                </Link>
+              </div>
               {abouts.map((about) => (
                 <AboutSnip key={about.sys.id} about={about} />
               ))}
