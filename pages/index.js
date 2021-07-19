@@ -58,7 +58,7 @@ export default function Home({ abouts, projects }) {
           {/* Open Graph */}
           <meta
             property="og:url"
-            content="https://website-shady-three.vercle.app"
+            content="https://website-sandy-three.vercel.app/"
             key="ogurl"
           />
           <meta

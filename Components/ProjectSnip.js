@@ -23,13 +23,12 @@ export default function Projects({ project }) {
                     layout="fill"
                     objectFit="cover"
                     alt={title}
-                    placeholder="blur"
                   />
                 </div>
                 <div className="px-3">
-                  <h3 className="text-sm font-semibold mb-2">
+                  <span className="text-sm font-semibold mb-2">
                     <Moment format="YYYY/MM/DD">{date}</Moment>
-                  </h3>
+                  </span>
                   <h2 className="text-2xl overflow-clip overflow-hidden text-gray-900 font-medium mb-4">
                     {title}
                   </h2>
