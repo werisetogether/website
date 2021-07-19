@@ -4,6 +4,7 @@ import Header from "../Components/Header";
 import ProjectSnip from "../Components/ProjectSnip";
 import AboutSnip from "../Components/AboutSnip";
 import DonateSnip from "../Components/DonateSnip";
+import HeaderIMG from "../public/headerc.jpg";
 import { createClient } from "contentful";
 import Link from "next/link";
 
@@ -54,6 +55,8 @@ export default function Home({ abouts, projects }) {
             name="twitter:description"
             content="We Rise Together is a non profit initiative based in India."
           />
+          <meta name="twitter:image" content={HeaderIMG} />
+          <meta name="twitter:image:alt" content="We Rise Together" />
 
           {/* Open Graph */}
           <meta
@@ -73,6 +76,7 @@ export default function Home({ abouts, projects }) {
             content="We Rise Together is a non profit initiative based in india."
             key="ogdesc"
           />
+          <meta property="og:image" content={HeaderIMG} />
         </Head>
         <main>
           <Layout>

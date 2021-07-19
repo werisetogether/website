@@ -35,7 +35,6 @@ export default function About({ aboutPage }) {
       <Head>
         <title>WeRiseTogether - About</title>
         <meta name="description" content="About We Rise Together" />
-        <link rel="icon" href="/favicon.icon" />
       </Head>
       <Layout>
         <section className="text-gray-600 body-font">
