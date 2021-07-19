@@ -1,9 +1,6 @@
 import Layout from "../Components/Layout";
 import Link from "next/link";
-import Image from "next/image";
 import { createClient } from "contentful";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import Moment from "react-moment";
 import Head from "next/head";
 
 const renderOptions = {

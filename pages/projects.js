@@ -73,6 +73,7 @@ export default function Projects({ projects }) {
                           className="rounded-2xl"
                           layout="fill"
                           objectFit="cover"
+                          about={project.fields.title}
                         />
                       </div>
                       <div className="px-3">

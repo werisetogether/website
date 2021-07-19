@@ -22,6 +22,7 @@ export default function About({ about }) {
           className="rounded-3xl"
           layout="fill"
           objectFit="cover"
+          alt="About Us"
         />
       </div>
       <div className="font-medium text-3xl sm:text-5xl">
@@ -36,6 +37,7 @@ export default function About({ about }) {
           className="rounded-3xl"
           layout="fill"
           objectFit="contain"
+          alt="India Map"
         />
       </div>
     </div>

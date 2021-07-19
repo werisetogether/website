@@ -54,6 +54,7 @@ export default function About({ aboutPage }) {
                     className="rounded-2xl"
                     layout="fill"
                     objectFit="cover"
+                    alt="about us"
                   />
                 </div>
                 <div className="flex flex-col sm:flex-row mt-10">

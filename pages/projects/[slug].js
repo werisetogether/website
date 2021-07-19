@@ -68,6 +68,7 @@ export default function RecipeDetails({ project }) {
                   objectFit="cover"
                   layout="fill"
                   src={"https:" + thumbnail.fields.file.url}
+                  alt={title}
                 />
               </div>
               <div className="flex flex-wrap w-full my-10">
