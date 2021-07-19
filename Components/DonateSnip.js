@@ -16,7 +16,7 @@ const DonateSnip = () => {
             className="font-medium text-2xl sm:text-4xl text-center rounded-xl py-5 leading-relaxed bg-gray-200"
             target="blank"
           >
-            Rs 180
+            Rs 100
           </a>
         </Link>
         <Link href="https://test.cashfree.com/billpay/product/1950">
@@ -24,7 +24,7 @@ const DonateSnip = () => {
             className="font-medium text-2xl sm:text-4xl text-center rounded-xl py-5 leading-relaxed bg-gray-200"
             target="blank"
           >
-            Rs 350
+            Rs 500
           </a>
         </Link>
         <Link href="https://test.cashfree.com/billpay/product/1950">
@@ -32,7 +32,7 @@ const DonateSnip = () => {
             className="font-medium text-2xl sm:text-4xl text-center rounded-xl py-5 leading-relaxed bg-gray-200"
             target="blank"
           >
-            Rs 890
+            Rs 1000
           </a>
         </Link>
         <Link href="https://test.cashfree.com/billpay/product/1950">

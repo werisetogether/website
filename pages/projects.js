@@ -49,10 +49,13 @@ export default function Projects({ projects }) {
                 <div className="h-2 w-20 bg-redBtn rounded"></div>
               </div>
               <p className="text-base sm:text-xl leading-7 sm:leading-9 font-normal">
-                Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-                gentrify, subway tile poke farm-to-table. Franzen you probably
-                haven't heard of them man bun deep jianbing selfies heirloom
-                prism food truck ugh squid celiac humblebrag.
+                We Rise Together Foundation has always looked forward to helping
+                people in all areas, be it sanitation and hygiene through She
+                Hygiene, better lifestyle through Helping hands, or a healthy
+                nature through Sunday4SecuredFuture. We are trying our level
+                best to keep up with our work and to bring happiness through our
+                initiatives but we need your support and kind gestures to move
+                forward. Donate now to help those who need it the most!
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

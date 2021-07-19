@@ -4,7 +4,7 @@ import Header from "../Components/Header";
 import ProjectSnip from "../Components/ProjectSnip";
 import AboutSnip from "../Components/AboutSnip";
 import DonateSnip from "../Components/DonateSnip";
-import HeaderIMG from "../public/headerc.jpg";
+import HeaderIMG from "../public/header.png";
 import { createClient } from "contentful";
 import Link from "next/link";
 
@@ -24,6 +24,7 @@ export async function getStaticProps() {
     props: {
       abouts: abouts.items,
       projects: projects.items,
+      revalidate: 1,
     },
   };
 }
@@ -88,7 +89,7 @@ export default function Home({ abouts, projects }) {
                 ))}
                 <Link href="/projects">
                   <a className="sm:col-span-2">
-                    <button className="focus:outline-none border-2 border-black rounded-xl px-8 py-4 text-lg sm:text-xl font-semibold flex justify-center w-full h-full items-center">
+                    <button className="focus:outline-none border-2 border-black rounded-3xl px-8 py-4 text-lg sm:text-xl font-semibold flex justify-center w-full h-full items-center">
                       See Projects
                     </button>
                   </a>
