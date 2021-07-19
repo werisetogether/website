@@ -8,7 +8,7 @@ const Footer = () => {
       </a>
       <div className="py-8 border-t mt-4 border-gray-200 md:flex md:items-start md:justify-between">
         <div>
-          <p className="text-base text-gray-400 mb-2 font-medium">
+          <p className="text-base text-gray-600 mb-2 font-medium">
             Let's get in touch
           </p>
           <Link href="mailto:">
