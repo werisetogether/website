@@ -15,6 +15,7 @@ const Header = () => {
           layout="fill"
           objectFit="cover"
           placeholder="blur"
+          priority={true}
         />
       </div>
       <div className="mt-7 sm:mt-12 max-w-4xl mx-auto">
