@@ -15,6 +15,7 @@ const Header = () => {
           alt="Header image"
           layout="fill"
           objectFit="cover"
+          placeholder="blur"
         />
       </div>
       <div className="mt-7 sm:mt-12 max-w-4xl mx-auto">

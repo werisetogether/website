@@ -23,6 +23,7 @@ export default function Projects({ project }) {
                     layout="fill"
                     objectFit="cover"
                     alt={title}
+                    placeholder="blur"
                   />
                 </div>
                 <div className="px-3">
