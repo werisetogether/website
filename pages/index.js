@@ -34,10 +34,9 @@ export default function Home({ abouts, projects }) {
         <Head>
           <title>WeRiseTogether</title>
           <meta property="og:title" content="WeRiseTogether" />
-          <link rel="icon" href="/favicon.icon" />
           <meta
             name="description"
-            content="We Rise Together is a non profit initiative based in india."
+            content="We Rise Together is a non profit initiative based in India."
           />
           <meta
             name="keywords"
@@ -48,8 +47,13 @@ export default function Home({ abouts, projects }) {
           <meta name="revisit-after" content="5 days" />
           <meta name="author" content="We Rise Together" />
           {/* Twitter */}
-          <meta name="twitter:card" content="summary" key="twcard" />
-          <meta name="twitter:creator" content="shreyatuli" key="twhandle" />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:title" content="We Rise Together" />
+          <meta name="twitter:site" content="@ShreyaTuli_" />
+          <meta
+            name="twitter:description"
+            content="We Rise Together is a non profit initiative based in India."
+          />
 
           {/* Open Graph */}
           <meta
