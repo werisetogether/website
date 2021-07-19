@@ -61,7 +61,7 @@ const Header = () => {
         </div>
 
         <div className="mt-10 sm:w-1/3">
-          <Link href="">
+          <Link href="/donate">
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 1 }}
