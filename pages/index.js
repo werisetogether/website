@@ -5,6 +5,7 @@ import ProjectSnip from "../Components/ProjectSnip";
 import AboutSnip from "../Components/AboutSnip";
 import DonateSnip from "../Components/DonateSnip";
 import { createClient } from "contentful";
+import HeaderIMG from "../public/headerc.jpg";
 import Link from "next/link";
 
 export async function getStaticProps() {
@@ -46,6 +47,8 @@ export default function Home({ abouts, projects }) {
           <meta name="language" content="English" />
           <meta name="revisit-after" content="5 days" />
           <meta name="author" content="We Rise Together" />
+          {/* Preloads */}
+          <link rel="preload" href={HeaderIMG} as="image" />
           {/* Twitter */}
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:title" content="We Rise Together" />

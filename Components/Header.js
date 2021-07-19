@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import HeaderIMG from "../public/header.jpg";
-import HandIMG from "../public/hand.png";
+import HeaderIMG from "../public/headerc.jpg";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import { motion } from "framer-motion";
 
