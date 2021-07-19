@@ -12,12 +12,6 @@ module.exports = {
       blueBtn: "#C1E5FF",
       redBtn: "#ffe0e0",
     }),
-
-    extend: {
-      backgroundImage: (theme) => ({
-        sheHy: "url('/header.jpg')",
-      }),
-    },
   },
   variants: {
     extend: {},
