@@ -22,6 +22,7 @@ export default function Projects({ project }) {
                     className="rounded-2xl"
                     layout="fill"
                     objectFit="cover"
+                    alt={title}
                   />
                 </div>
                 <div className="px-3">

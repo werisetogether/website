@@ -83,9 +83,9 @@ export default function Home({ abouts, projects }) {
                   <ProjectSnip key={project.sys.id} project={project} />
                 ))}
                 <Link href="/projects">
-                  <a className="sm:col-span-3">
+                  <a className="sm:col-span-2">
                     <button className="focus:outline-none border-2 border-black rounded-xl px-8 py-4 text-lg sm:text-xl font-semibold flex justify-center w-full h-full items-center">
-                      Learn more
+                      See Projects
                     </button>
                   </a>
                 </Link>
