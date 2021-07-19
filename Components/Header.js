@@ -29,7 +29,7 @@ const Header = () => {
                 color="#e9d6ff"
                 order={1}
                 iterations={1}
-                animationDuration={600}
+                animationDuration={400}
                 multiline={true}
               >
                 menstrual hygiene
@@ -40,7 +40,7 @@ const Header = () => {
                 color="#fee58d"
                 order={2}
                 iterations={1}
-                animationDuration={500}
+                animationDuration={300}
                 multiline={true}
               >
                 provision of resources
@@ -52,7 +52,7 @@ const Header = () => {
                 order={3}
                 strokeWidth={3}
                 iterations={1}
-                animationDuration={600}
+                animationDuration={400}
                 multiline={true}
               >
                 underprivileged children.

@@ -26,7 +26,7 @@ export default function Projects({ project }) {
                   />
                 </div>
                 <div className="px-3">
-                  <span className="text-sm font-semibold mb-2">
+                  <span className="text-xs text-gray-600 font-semibold mb-3">
                     <Moment format="YYYY/MM/DD">{date}</Moment>
                   </span>
                   <h2 className="text-2xl overflow-clip overflow-hidden text-gray-900 font-medium mb-4">

@@ -40,7 +40,7 @@ const Footer = () => {
           </Link>
         </div>
 
-        <p className="text-sm text-gray-400 pt-6 md:pt-0">
+        <p className="text-sm text-gray-600 pt-6 md:pt-0">
           &copy; 2021 We Rise Together. All rights reserved.
         </p>
       </div>

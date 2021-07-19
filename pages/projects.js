@@ -76,11 +76,11 @@ export default function Projects({ projects }) {
                         />
                       </div>
                       <div className="px-3">
-                        <h3 className="text-sm font-semibold mb-2">
+                        <span className="text-xs text-gray-600 font-semibold mb-3">
                           <Moment format="YYYY/MM/DD">
                             {project.fields.date}
                           </Moment>
-                        </h3>
+                        </span>
                         <h2 className="text-2xl text-gray-900 font-medium mb-4">
                           {project.fields.title}
                         </h2>
