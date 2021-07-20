@@ -44,7 +44,7 @@ export default function Donate ({ projects }) {
                 </h1>
                 <div className="h-2 w-20 bg-redBtn rounded"></div>
               </div>
-              <p className="text-base sm:text-xl leading-7 sm:leading-9 font-normal">
+              <p className="text-sm sm:text-xl leading-7 sm:leading-9 font-normal">
                 We Rise Together Foundation has always looked forward to helping
                 people in all areas, be it sanitation and hygiene through She
                 Hygiene, better lifestyle through Helping hands, or a healthy

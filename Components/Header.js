@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Header = () => {
   return (
     <header>
-      <div className="relative h-80">
+      <div className="relative h-40 sm:h-80">
         <Image
           src={HeaderIMG}
           className="rounded-3xl"

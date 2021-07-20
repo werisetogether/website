@@ -47,7 +47,7 @@ export default function About({ aboutPage }) {
                   </h1>
                   <div className="h-2 w-20 bg-redBtn rounded"></div>
                 </div>
-                <div className=" h-80 mb-5 relative">
+                <div className="h-48 sm:h-80 mb-5 relative">
                   <Image
                     src={"https:" + about.fields.thumbnail.fields.file.url}
                     className="rounded-2xl"
@@ -80,7 +80,7 @@ export default function About({ aboutPage }) {
                     </div>
                   </div>
                   <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0">
-                    <div className="text-base sm:text-xl leading-7 sm:leading-9 font-normal mt-7 sm:mt-12">
+                    <div className="text-sm sm:text-xl leading-7 sm:leading-9 font-normal mt-7 sm:mt-12">
                       {documentToReactComponents(
                         about.fields.description,
                         renderOptions

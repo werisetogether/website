@@ -60,7 +60,7 @@ export default function RecipeDetails({ project }) {
         <section className="">
           <div className="flex flex-col">
             <div className="">
-              <div className="h-80 relative">
+              <div className="h-40 sm:h-80 relative">
                 <Image
                   alt="content"
                   className="rounded-3xl h-full w-full"
@@ -72,13 +72,13 @@ export default function RecipeDetails({ project }) {
               </div>
               <div className="flex flex-wrap w-full my-10">
                 <div className="w-full">
-                  <div className="sm:text-3xl text-2xl font-medium title-font mb-2">
+                  <div className="sm:text-3xl text-2xl font-medium title-font mb-2 break-all">
                     {title}
                   </div>
                   <div className="h-1 w-20 bg-redBtn rounded"></div>
                 </div>
               </div>
-              <div className="text-base sm:text-xl leading-7 sm:leading-9 font-normal">
+              <div className="text-sm sm:text-xl leading-7 sm:leading-9 font-normal">
                 {documentToReactComponents(description, renderOptions)}
               </div>
             </div>
