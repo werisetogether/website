@@ -4,7 +4,6 @@ module.exports = {
     fontFamily: {
       sans: ["Montserrat", "sans-serif"],
     },
-
     backgroundColor: (theme) => ({
       ...theme("colors"),
       primaryBG: "#fefaf5",
