@@ -34,11 +34,15 @@ export default function Home({ abouts, projects }) {
     <div>
       <div>
         <Head>
-          <title>WeRiseTogether</title>
-          <meta property="og:title" content="WeRiseTogether" />
+          {/* Genral Tags */}
+          <title>We Rise Together — Inspire, Aid and Empower</title>
+          <meta
+            name="title"
+            content="We Rise Together — Inspire, Aid and Empower"
+          />
           <meta
             name="description"
-            content="We Rise Together is a non profit initiative based in India."
+            content="A non-profit organisation in India working towards the welfare of society and its surroundings"
           />
           <meta
             name="keywords"
@@ -48,36 +52,40 @@ export default function Home({ abouts, projects }) {
           <meta name="language" content="English" />
           <meta name="revisit-after" content="5 days" />
           <meta name="author" content="We Rise Together" />
-          {/* Twitter */}
-          <meta name="twitter:card" content="summary" />
-          <meta name="twitter:title" content="We Rise Together" />
-          <meta name="twitter:site" content="@ShreyaTuli_" />
-          <meta
-            name="twitter:description"
-            content="We Rise Together is a non profit initiative based in India."
-          />
-          <meta name="twitter:image" content={HeaderIMG} />
-          <meta name="twitter:image:alt" content="We Rise Together" />
 
           {/* Open Graph */}
+          <meta property="og:type" content="website" />
           <meta
             property="og:url"
             content="https://website-sandy-three.vercel.app/"
-            key="ogurl"
           />
           <meta
-            property="og:site_name"
-            content="WeRiseTogether"
-            key="ogsitename"
+            property="og:title"
+            content="We Rise Together — Inspire, Aid and Empower"
           />
-          <meta property="og:title" content="WeRiseTogether" key="ogtitle" />
-          <meta property="og:locale" content="en_GB" />
           <meta
             property="og:description"
-            content="We Rise Together is a non profit initiative based in india."
-            key="ogdesc"
+            content="A non-profit organisation in India working towards the welfare of society and its surroundings"
           />
           <meta property="og:image" content={HeaderIMG} />
+          <meta property="og:locale" content="en_GB" />
+
+          {/* Twitter */}
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta
+            property="twitter:url"
+            content="https://website-sandy-three.vercel.app/"
+          />
+          <meta
+            property="twitter:title"
+            content="We Rise Together — Inspire, Aid and Empower"
+          />
+          <meta
+            property="twitter:description"
+            content="A non-profit organisation in India working towards the welfare of society and its surroundings"
+          />
+          <meta property="twitter:image" content={HeaderIMG} />
+          <meta name="twitter:image:alt" content="We Rise Together" />
         </Head>
         <main>
           <Layout>
