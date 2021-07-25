@@ -1,5 +1,6 @@
 import Layout from "../Components/Layout";
 import Link from "next/link";
+import HeaderIMG from "../public/header.png";
 import Image from "next/image";
 import { createClient } from "contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
@@ -35,8 +36,58 @@ export default function About({ about, team }) {
   return (
     <div>
       <Head>
-        <title>WeRiseTogether - About</title>
-        <meta name="description" content="About We Rise Together" />
+        {/* Genral Tags */}
+        <title>We Rise Together — About</title>
+        <meta
+          name="title"
+          content="We Rise Together — About"
+        />
+        <meta
+          name="description"
+          content="A non-profit organisation in India working towards the welfare of society and its surroundings"
+        />
+        <meta
+          name="keywords"
+          content="werisetogether, we rise together, non profit organisation, menstrual hygiene, ngo india, shreya tuli, aarava seth, sunday4securedfuture, s4sf, shehygiene, she hygiene, helping hands"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="1 days" />
+        <meta name="author" content="We Rise Together" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://website-sandy-three.vercel.app/about"
+        />
+        <meta
+          property="og:title"
+          content="We Rise Together — About"
+        />
+        <meta
+          property="og:description"
+          content="A non-profit organisation in India working towards the welfare of society and its surroundings"
+        />
+        <meta property="og:image" content={HeaderIMG} />
+        <meta property="og:locale" content="en_GB" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://website-sandy-three.vercel.app/about"
+        />
+        <meta
+          property="twitter:title"
+          content="We Rise Together — About"
+        />
+        <meta
+          property="twitter:description"
+          content="A non-profit organisation in India working towards the welfare of society and its surroundings"
+        />
+        <meta property="twitter:image" content={HeaderIMG} />
+        <meta name="twitter:image:alt" content="We Rise Together" />
       </Head>
       <Layout>
         <section className="">
@@ -77,10 +128,10 @@ export default function About({ about, team }) {
           <div className="grid grid-cols-2 gap-2">
             {team.map((team) => (
               <div
-                class="h-full flex flex-col items-center text-center"
+                className="h-full flex flex-col items-center text-center"
                 key={team.sys.id}
               >
-                <div className="h-48 w-48 sm:h-80 sm:w-80 mb-5 relative">
+                <div className="h-32 w-32 sm:h-60 sm:w-60 mb-5 relative">
                   <Image
                     src={"https:" + team.fields.profilePicture.fields.file.url}
                     className="rounded-full"

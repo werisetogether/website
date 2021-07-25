@@ -9,9 +9,9 @@ const Footer = () => {
       <div className="py-8 border-t mt-4 border-gray-200 md:flex md:items-start md:justify-between">
         <div>
           <p className="text-base text-gray-600 mb-2 font-medium">
-            Let's get in touch
+            💪 We Rise Together
           </p>
-          <Link href="mailto:">
+          <Link href="mailto:werisetogetherfoundation@gmail.com">
             <a
               className="mr-4 text-gray-700 text-sm font-medium hover:underline"
               target="_blank"
@@ -20,22 +20,20 @@ const Footer = () => {
               Email
             </a>
           </Link>
-          <Link href="">
+          <Link href="/projects">
             <a
               className="mr-4 text-gray-700 text-sm font-medium hover:underline"
-              target="_blank"
               rel="noreferrer"
             >
-              Telephone (Name)
+              Projects
             </a>
           </Link>
-          <Link href="">
+          <Link href="/donate">
             <a
               className="mr-4 text-gray-700 text-sm font-medium hover:underline"
-              target="_blank"
               rel="noreferrer"
             >
-              Twitter
+              Donate
             </a>
           </Link>
         </div>
