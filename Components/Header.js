@@ -23,7 +23,7 @@ const Header = () => {
           <h1 className="text-2xl sm:text-5xl font-bold">We Rise Together</h1>
           <p className="text-lg sm:text-2xl font-medium mt-5 sm:mt-10 leading-10 tracking-normal">
             <RoughNotationGroup show={true}>
-              We work towards{" "}
+              We scale{" "}
               <RoughNotation
                 type="highlight"
                 color="#e9d6ff"
@@ -32,9 +32,9 @@ const Header = () => {
                 animationDuration={400}
                 multiline={true}
               >
-                menstrual hygiene
+                evidence-based programs
               </RoughNotation>{" "}
-              and{" "}
+              towards pressing{" "}
               <RoughNotation
                 type="highlight"
                 color="#fee58d"
@@ -43,9 +43,9 @@ const Header = () => {
                 animationDuration={300}
                 multiline={true}
               >
-                provision of resources
+                environmental
               </RoughNotation>{" "}
-              to{" "}
+              and{" "}
               <RoughNotation
                 type="underline"
                 color="#ffcac9"
@@ -55,7 +55,7 @@ const Header = () => {
                 animationDuration={400}
                 multiline={true}
               >
-                underprivileged children.
+                social issues.
               </RoughNotation>
             </RoughNotationGroup>
           </p>
