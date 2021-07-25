@@ -14,7 +14,7 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   });
 
-  const abouts = await client.getEntries({ content_type: "homepageAbout" });
+  const abouts = await client.getEntries({ content_type: "about" });
   const projects = await client.getEntries({
     content_type: "singleProject",
     limit: 2,
@@ -46,11 +46,11 @@ export default function Home({ abouts, projects }) {
           />
           <meta
             name="keywords"
-            content="werisetogether, we rise together, non profit organisation, menstrual hygiene, ngo india, shreya tuli"
+            content="werisetogether, we rise together, non profit organisation, menstrual hygiene, ngo india, shreya tuli, aarava seth, sunday4securedfuture, s4sf, shehygiene, she hygiene, helping hands"
           />
           <meta name="robots" content="index, follow" />
           <meta name="language" content="English" />
-          <meta name="revisit-after" content="5 days" />
+          <meta name="revisit-after" content="1 days" />
           <meta name="author" content="We Rise Together" />
 
           {/* Open Graph */}

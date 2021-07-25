@@ -4,6 +4,7 @@ import Layout from "../../Components/Layout";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import DonateSnip from "../../Components/DonateSnip";
 import Head from "next/head";
+import Link from "next/link";
 
 const renderOptions = {
   renderText: (text) => {
@@ -48,7 +49,7 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export default function RecipeDetails({ project }) {
-  const { title, description, thumbnail } = project.fields;
+  const { title, description, thumbnail, gallery } = project.fields;
 
   return (
     <div>
@@ -84,6 +85,32 @@ export default function RecipeDetails({ project }) {
             </div>
           </div>
         </section>
+        {gallery != null ? (
+          <div className="mt-24">
+            <h1 className="font-semibold text-2xl sm:text-5xl">Gallery</h1>
+            <p className="text-sm sm:text-xl leading-7 sm:leading-9 mt-5 sm:mt-12">
+              We gained a lot of unforgettable memories from all the events we
+              do. Have a peek at how our event look like by clicking on the
+              cards below.
+            </p>
+            <div className="grid grid-cols-2 gap-2 mt-7 sm:mt-12">
+              {gallery.map((gallery) => (
+                <Link
+                  key={gallery.sys.id}
+                  gallery={gallery}
+                  href={"/gallery/" + gallery.fields.slug}
+                >
+                  <a className="border-2 border-black hover:bg-gray-100 p-4 rounded-3xl text-center">
+                    <h3 className="text-lg font-medium">
+                      {gallery.fields.title}
+                    </h3>
+                  </a>
+                </Link>
+              ))}
+            </div>
+          </div>
+        ) : null}
+
         <DonateSnip />
       </Layout>
     </div>

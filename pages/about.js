@@ -19,17 +19,19 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   });
 
-  const res = await client.getEntries({ content_type: "aboutPageDetails" });
+  const about = await client.getEntries({ content_type: "about" });
+  const team = await client.getEntries({ content_type: "team" });
 
   return {
     props: {
-      aboutPage: res.items,
+      about: about.items,
+      team: team.items,
       revalidate: 1,
     },
   };
 }
 
-export default function About({ aboutPage }) {
+export default function About({ about, team }) {
   return (
     <div>
       <Head>
@@ -37,8 +39,8 @@ export default function About({ aboutPage }) {
         <meta name="description" content="About We Rise Together" />
       </Head>
       <Layout>
-        <section className="text-gray-600 body-font">
-          {aboutPage.map((about) => (
+        <section className="">
+          {about.map((about) => (
             <div className="flex flex-col" key={about.sys.id}>
               <div className="">
                 <div className="w-full mb-6">
@@ -56,43 +58,50 @@ export default function About({ aboutPage }) {
                     alt="about us"
                   />
                 </div>
-                <div className="flex flex-col sm:flex-row mt-10">
-                  <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-                    <div className="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
-                      <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        className="w-10 h-10"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
-                      </svg>
-                    </div>
-                    <div className="flex flex-col items-center text-center justify-center">
-                      <h2 className="font-medium title-font mt-4 text-gray-900 text-lg">
-                        {about.fields.founderName}
-                      </h2>
-                      <p className="text-base">Founder, We Rise Together</p>
-                    </div>
-                  </div>
-                  <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0">
-                    <div className="text-sm sm:text-xl leading-7 sm:leading-9 font-normal mt-7 sm:mt-12">
-                      {documentToReactComponents(
-                        about.fields.description,
-                        renderOptions
-                      )}
-                    </div>
-                  </div>
+
+                <div className="text-sm sm:text-xl leading-7 sm:leading-9 font-normal my-10">
+                  {documentToReactComponents(
+                    about.fields.description,
+                    renderOptions
+                  )}
                 </div>
               </div>
             </div>
           ))}
+
+          <hr />
+
+          <h2 className="sm:text-3xl text-2xl font-medium text-center title-font my-10 text-gray-900">
+            The Team
+          </h2>
+          <div className="grid grid-cols-2 gap-2">
+            {team.map((team) => (
+              <div
+                class="h-full flex flex-col items-center text-center"
+                key={team.sys.id}
+              >
+                <div className="h-48 w-48 sm:h-80 sm:w-80 mb-5 relative">
+                  <Image
+                    src={"https:" + team.fields.profilePicture.fields.file.url}
+                    className="rounded-full"
+                    layout="fill"
+                    objectFit="cover"
+                    alt="about us"
+                  />
+                </div>
+                <div class="w-full">
+                  <div class="font-medium texl-xl sm:text-2xl">
+                    {team.fields.name}
+                  </div>
+                  <div class="text-gray-500 texl-base sm:text-xl">
+                    {team.fields.position}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </section>
       </Layout>
     </div>
   );
-};
+}

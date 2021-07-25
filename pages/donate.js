@@ -57,7 +57,7 @@ export default function Donate ({ projects }) {
             <div className="grid grid-cols-2 sm:grid-cols-3 items-center gap-4 mt-7 sm:mt-12">
               <Link href="https://test.cashfree.com/billpay/product/1950">
                 <a
-                  className="font-medium text-2xl sm:text-4xl text-center rounded-xl py-5 leading-relaxed bg-gray-200"
+                  className="font-medium text-2xl sm:text-4xl text-center rounded-3xl py-5 leading-relaxed bg-gray-200"
                   target="blank"
                 >
                   Rs 100
@@ -65,7 +65,7 @@ export default function Donate ({ projects }) {
               </Link>
               <Link href="https://test.cashfree.com/billpay/product/1950">
                 <a
-                  className="font-medium text-2xl sm:text-4xl text-center rounded-xl py-5 leading-relaxed bg-gray-200"
+                  className="font-medium text-2xl sm:text-4xl text-center rounded-3xl py-5 leading-relaxed bg-gray-200"
                   target="blank"
                 >
                   Rs 500
@@ -73,7 +73,7 @@ export default function Donate ({ projects }) {
               </Link>
               <Link href="https://test.cashfree.com/billpay/product/1950">
                 <a
-                  className="font-medium text-2xl sm:text-4xl text-center rounded-xl py-5 leading-relaxed bg-gray-200"
+                  className="font-medium text-2xl sm:text-4xl text-center rounded-3xl py-5 leading-relaxed bg-gray-200"
                   target="blank"
                 >
                   Rs 1000
@@ -81,7 +81,7 @@ export default function Donate ({ projects }) {
               </Link>
               <Link href="https://test.cashfree.com/billpay/product/1950">
                 <a
-                  className="sm:col-span-3 font-medium text-2xl sm:text-4xl text-center rounded-xl py-5 leading-relaxed bg-redBtn"
+                  className="sm:col-span-3 font-medium text-2xl sm:text-4xl text-center rounded-3xl py-5 leading-relaxed bg-redBtn"
                   target="blank"
                 >
                   Custom

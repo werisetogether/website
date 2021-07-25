@@ -13,7 +13,7 @@ const DonateSnip = () => {
       <div className="grid grid-cols-2 sm:grid-cols-3 items-center gap-2 mt-7 sm:mt-12">
         <Link href="https://test.cashfree.com/billpay/product/1950">
           <a
-            className="font-medium text-2xl sm:text-4xl text-center rounded-xl py-5 leading-relaxed bg-gray-200"
+            className="font-medium text-2xl sm:text-4xl text-center rounded-3xl py-5 leading-relaxed bg-gray-200"
             target="blank"
           >
             Rs 100
@@ -21,7 +21,7 @@ const DonateSnip = () => {
         </Link>
         <Link href="https://test.cashfree.com/billpay/product/1950">
           <a
-            className="font-medium text-2xl sm:text-4xl text-center rounded-xl py-5 leading-relaxed bg-gray-200"
+            className="font-medium text-2xl sm:text-4xl text-center rounded-3xl py-5 leading-relaxed bg-gray-200"
             target="blank"
           >
             Rs 500
@@ -29,7 +29,7 @@ const DonateSnip = () => {
         </Link>
         <Link href="https://test.cashfree.com/billpay/product/1950">
           <a
-            className="font-medium text-2xl sm:text-4xl text-center rounded-xl py-5 leading-relaxed bg-gray-200"
+            className="font-medium text-2xl sm:text-4xl text-center rounded-3xl py-5 leading-relaxed bg-gray-200"
             target="blank"
           >
             Rs 1000
@@ -37,7 +37,7 @@ const DonateSnip = () => {
         </Link>
         <Link href="https://test.cashfree.com/billpay/product/1950">
           <a
-            className="sm:col-span-3 font-medium text-2xl sm:text-4xl text-center rounded-xl py-5 leading-relaxed bg-redBtn"
+            className="sm:col-span-3 font-medium text-2xl sm:text-4xl text-center rounded-3xl py-5 leading-relaxed bg-redBtn"
             target="blank"
           >
             Custom
