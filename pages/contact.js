@@ -4,7 +4,6 @@ import Image from "next/image";
 import HeaderIMG from "../public/header.png";
 import Head from "next/head";
 import emailjs from "emailjs-com";
-import Popup from "reactjs-popup";
 
 export default function Contact() {
   
