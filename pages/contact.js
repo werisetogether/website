@@ -33,8 +33,8 @@ export default function Contact() {
     <div>
       <Head>
         {/* Genral Tags */}
-        <title>We Rise Together — About</title>
-        <meta name="title" content="We Rise Together — Projects" />
+        <title>We Rise Together — Contact</title>
+        <meta name="title" content="We Rise Together — Contact" />
         <meta
           name="description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"
@@ -52,9 +52,9 @@ export default function Contact() {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://website-sandy-three.vercel.app/projects"
+          content="https://website-sandy-three.vercel.app/contact"
         />
-        <meta property="og:title" content="We Rise Together — Projects" />
+        <meta property="og:title" content="We Rise Together — Contact" />
         <meta
           property="og:description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"
@@ -66,9 +66,9 @@ export default function Contact() {
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content="https://website-sandy-three.vercel.app/projects"
+          content="https://website-sandy-three.vercel.app/contact"
         />
-        <meta property="twitter:title" content="We Rise Together — Projects" />
+        <meta property="twitter:title" content="We Rise Together — Contact" />
         <meta
           property="twitter:description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"
@@ -86,7 +86,8 @@ export default function Contact() {
               <div className="h-2 w-20 bg-redBtn rounded"></div>
             </div>
             <p className="text-sm sm:text-xl leading-7 sm:leading-9 font-normal">
-              Have a question you want to ask? Feel free to send us a message. We'll get back to you as soon as possible.
+              Have a question you want to ask? Feel free to send us a message.
+              We'll get back to you as soon as possible.
             </p>
           </div>
           <div class="mt-6 ">

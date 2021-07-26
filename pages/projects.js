@@ -37,7 +37,7 @@ export default function Projects({ projects }) {
     <div>
       <Head>
         {/* Genral Tags */}
-        <title>We Rise Together — About</title>
+        <title>We Rise Together — Projects</title>
         <meta name="title" content="We Rise Together — Projects" />
         <meta
           name="description"
