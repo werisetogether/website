@@ -1,5 +1,4 @@
 import Image from "next/image";
-import indiaMap from "../public/indiaMap.png";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 const renderOptions = {
@@ -11,7 +10,7 @@ const renderOptions = {
 };
 
 export default function About({ about }) {
-  const { title, description, thumbnail } = about.fields;
+  const { title, description, thumbnail, logo } = about.fields;
 
   return (
     <div className="mt-24">
@@ -31,13 +30,13 @@ export default function About({ about }) {
       <div className="text-sm sm:text-xl leading-7 sm:leading-9 font-normal mt-5 sm:mt-12">
         {documentToReactComponents(description, renderOptions)}
       </div>
-      <div className="h-48 sm:h-80 my-12 relative">
+      <div className="h-48 sm:h-80 mt-24 relative">
         <Image
-          src={indiaMap}
+          src={"https:" + logo.fields.file.url}
           className="rounded-3xl"
           layout="fill"
           objectFit="contain"
-          alt="India Map"
+          alt="We Rise Together Logo"
         />
       </div>
     </div>
