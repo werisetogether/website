@@ -15,6 +15,7 @@ export async function getStaticProps() {
   });
 
   const abouts = await client.getEntries({ content_type: "about" });
+  const donate = await client.getEntries({ content_type: "donationLink" });
   const projects = await client.getEntries({
     content_type: "singleProject",
     limit: 2,
@@ -24,12 +25,13 @@ export async function getStaticProps() {
     props: {
       abouts: abouts.items,
       projects: projects.items,
+      donate: donate.items,
       revalidate: 1,
     },
   };
 }
 
-export default function Home({ abouts, projects }) {
+export default function Home({ abouts, projects, donate }) {
   return (
     <div>
       <div>
@@ -106,7 +108,7 @@ export default function Home({ abouts, projects }) {
               {abouts.map((about) => (
                 <AboutSnip key={about.sys.id} about={about} />
               ))}
-              <DonateSnip />
+              <DonateSnip donate={donate} />
             </div>
           </Layout>
         </main>

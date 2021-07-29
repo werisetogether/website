@@ -18,17 +18,17 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   });
 
-  const res = await client.getEntries({ content_type: "singleProject" });
+  const link = await client.getEntries({ content_type: "donationLink" });
 
   return {
     props: {
-      projects: res.items,
+      link: link.items,
       revalidate: 1,
     },
   };
 }
 
-export default function Donate ({ projects }) {
+export default function Donate({ link }) {
   return (
     <div>
       <Head>
@@ -68,10 +68,7 @@ export default function Donate ({ projects }) {
           property="twitter:url"
           content="https://website-sandy-three.vercel.app/donate"
         />
-        <meta
-          property="twitter:title"
-          content="We Rise Together — Donate"
-        />
+        <meta property="twitter:title" content="We Rise Together — Donate" />
         <meta
           property="twitter:description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"
@@ -100,38 +97,16 @@ export default function Donate ({ projects }) {
               </p>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 items-center gap-4 mt-7 sm:mt-12">
-              <Link href="https://test.cashfree.com/billpay/product/1950">
-                <a
-                  className="font-medium text-2xl sm:text-4xl text-center rounded-3xl py-5 leading-relaxed bg-gray-200"
-                  target="blank"
-                >
-                  Rs 100
-                </a>
-              </Link>
-              <Link href="https://test.cashfree.com/billpay/product/1950">
-                <a
-                  className="font-medium text-2xl sm:text-4xl text-center rounded-3xl py-5 leading-relaxed bg-gray-200"
-                  target="blank"
-                >
-                  Rs 500
-                </a>
-              </Link>
-              <Link href="https://test.cashfree.com/billpay/product/1950">
-                <a
-                  className="font-medium text-2xl sm:text-4xl text-center rounded-3xl py-5 leading-relaxed bg-gray-200"
-                  target="blank"
-                >
-                  Rs 1000
-                </a>
-              </Link>
-              <Link href="https://test.cashfree.com/billpay/product/1950">
-                <a
-                  className="sm:col-span-3 font-medium text-2xl sm:text-4xl text-center rounded-3xl py-5 leading-relaxed bg-redBtn"
-                  target="blank"
-                >
-                  Custom
-                </a>
-              </Link>
+              {link.map((link) => (
+                <Link href={link.fields.link}>
+                  <a
+                    className="font-medium text-2xl sm:text-4xl text-center rounded-3xl py-5 leading-relaxed bg-redBtn"
+                    target="blank"
+                  >
+                    {link.fields.name}
+                  </a>
+                </Link>
+              ))}
             </div>
           </div>
         </section>

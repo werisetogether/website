@@ -42,13 +42,15 @@ export const getStaticProps = async ({ params }) => {
     "fields.slug": params.slug,
   });
 
+  const donate = await client.getEntries({ content_type: "donationLink" });
+
   return {
-    props: { project: items[0] },
+    props: { project: items[0], donate: donate.items },
     revalidate: 1,
   };
 };
 
-export default function RecipeDetails({ project }) {
+export default function RecipeDetails({ project, donate }) {
   const { title, description, thumbnail, gallery } = project.fields;
 
   return (
@@ -111,7 +113,7 @@ export default function RecipeDetails({ project }) {
           </div>
         ) : null}
 
-        <DonateSnip />
+        <DonateSnip donate={donate} />
       </Layout>
     </div>
   );

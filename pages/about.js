@@ -38,10 +38,7 @@ export default function About({ about, team }) {
       <Head>
         {/* Genral Tags */}
         <title>We Rise Together — About</title>
-        <meta
-          name="title"
-          content="We Rise Together — About"
-        />
+        <meta name="title" content="We Rise Together — About" />
         <meta
           name="description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"
@@ -61,10 +58,7 @@ export default function About({ about, team }) {
           property="og:url"
           content="https://website-sandy-three.vercel.app/about"
         />
-        <meta
-          property="og:title"
-          content="We Rise Together — About"
-        />
+        <meta property="og:title" content="We Rise Together — About" />
         <meta
           property="og:description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"
@@ -78,10 +72,7 @@ export default function About({ about, team }) {
           property="twitter:url"
           content="https://website-sandy-three.vercel.app/about"
         />
-        <meta
-          property="twitter:title"
-          content="We Rise Together — About"
-        />
+        <meta property="twitter:title" content="We Rise Together — About" />
         <meta
           property="twitter:description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"
@@ -123,7 +114,7 @@ export default function About({ about, team }) {
           <hr />
 
           <h2 className="sm:text-3xl text-2xl font-medium text-center title-font my-10 text-gray-900">
-            The Team
+            The Founders
           </h2>
           <div className="grid grid-cols-2 gap-2">
             {team.map((team) => (
@@ -145,7 +136,15 @@ export default function About({ about, team }) {
                     {team.fields.name}
                   </div>
                   <div class="text-gray-500 texl-base sm:text-xl">
-                    {team.fields.position}
+                    <Link
+                      href={
+                        "https://twitter.com/" + team.fields.twitterUsername
+                      }
+                    >
+                      <a className="inline-flex items-center justify-center mt-1 hover:underline">
+                        @{team.fields.twitterUsername}
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>
