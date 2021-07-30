@@ -12,14 +12,6 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_h9i9os2`",
-        "template_9srk6kn`",
-        e.target,
-        "user_9nWLqvNaOVIEZ5fm1y8D6`"
-    );
-
-    emailjs
-      .sendForm(
         "service_h9i9os2",
         "template_9srk6kn",
         e.target,
