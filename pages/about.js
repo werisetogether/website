@@ -27,7 +27,7 @@ export async function getStaticProps() {
     props: {
       about: about.items,
       team: team.items,
-      revalidate: 1,
+      revalidate: 10,
     },
   };
 }

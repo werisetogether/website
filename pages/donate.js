@@ -23,7 +23,7 @@ export async function getStaticProps() {
   return {
     props: {
       link: link.items,
-      revalidate: 1,
+      revalidate: 10,
     },
   };
 }

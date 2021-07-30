@@ -46,7 +46,7 @@ export const getStaticProps = async ({ params }) => {
 
   return {
     props: { gallery: items[0], donate: donate.items },
-    revalidate: 1,
+    revalidate: 10,
   };
 };
 

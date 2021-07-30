@@ -1,21 +1,5 @@
 import Link from "next/link";
 
-export async function getStaticProps() {
-  const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
-  });
-
-  const donate = await client.getEntries({ content_type: "donationLink" });
-
-  return {
-    props: {
-      donate: donate.items,
-      revalidate: 1,
-    },
-  };
-}
-
 export default function DonateSnip({ donate }) {
   return (
     <div className="mt-24">
