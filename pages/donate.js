@@ -96,7 +96,7 @@ export default function Donate({ link }) {
                 forward. Donate now to help those who need it the most!
               </p>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 items-center gap-4 mt-7 sm:mt-12">
+            <div className="grid grid-cols-2 sm:grid-cols-3 items-center gap-4 mt-7">
               {link.map((link) => (
                 <Link href={link.fields.link}>
                   <a

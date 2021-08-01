@@ -23,10 +23,10 @@ export default function AboutSnip({about}) {
           alt="About Us"
         />
       </div>
-      <div className="font-medium text-2xl sm:text-5xl">
+      <div className="font-medium text-2xl sm:text-4xl">
         {documentToReactComponents(about.title, renderOptions)}
       </div>
-      <div className="text-sm sm:text-xl leading-7 sm:leading-9 font-normal mt-5 sm:mt-12">
+      <div className="text-sm sm:text-xl leading-7 sm:leading-9 font-normal mt-5 sm:mt-10">
         {documentToReactComponents(about.description, renderOptions)}
       </div>
       <div className="h-48 sm:h-80 mt-24 relative">

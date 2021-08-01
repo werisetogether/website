@@ -3,10 +3,26 @@ import Link from "next/link";
 import Image from "next/image";
 import HeaderIMG from "../public/header.png";
 import Head from "next/head";
+import { createClient } from "contentful";
 import emailjs from "emailjs-com";
 
-export default function Contact() {
-  
+export async function getStaticProps() {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+  });
+
+  const social = await client.getEntries({ content_type: "socialLink" });
+
+  return {
+    props: {
+      social: social.items,
+      revalidate: 10,
+    },
+  };
+}
+
+export default function Contact({social}) {
   function sendEmail(e) {
     e.preventDefault();
 
@@ -16,9 +32,8 @@ export default function Contact() {
         "template_9srk6kn",
         e.target,
         "user_9nWLqvNaOVIEZ5fm1y8D6"
-    ).then(
-        alert("Message sent! We'll get back to you as soon as possibe.")
-    );
+      )
+      .then(alert("Message sent! We'll get back to you as soon as possibe."));
   }
 
   return (
@@ -82,18 +97,18 @@ export default function Contact() {
               We'll get back to you as soon as possible.
             </p>
           </div>
-          <div class="mt-6 ">
+          <div className="mt-6 ">
             <form
-              class="grid grid-cols-1 sm:grid-cols-2 gap-4"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
               onSubmit={sendEmail}
             >
-              <div class="">
-                <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
+              <div className="">
+                <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
                   Name
                 </label>
 
                 <input
-                  class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+                  className="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
                   type="text"
                   placeholder="John Doe"
                   name="name"
@@ -101,13 +116,13 @@ export default function Contact() {
                 />
               </div>
 
-              <div class="">
-                <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
+              <div className="">
+                <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
                   E-mail
                 </label>
 
                 <input
-                  class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+                  className="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
                   type="email"
                   placeholder="johndoe@example.com"
                   name="email"
@@ -115,26 +130,39 @@ export default function Contact() {
                 />
               </div>
 
-              <div class="w-full mt-4 sm:col-span-2">
-                <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
+              <div className="w-full mt-4 sm:col-span-2">
+                <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
                   Message
                 </label>
 
                 <textarea
-                  class="block w-full h-40 px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+                  className="block w-full h-40 px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
                   placeholder="Type in your message..."
                   name="message"
                   required
                 />
               </div>
               <input
-                class="border-2 border-black bg-white hover:bg-gray-100 p-2 sm:p-4 rounded-3xl"
+                className="border-2 border-black bg-white hover:bg-gray-100 p-2 sm:p-4 rounded-3xl"
                 type="submit"
                 value="Send Message"
               />
             </form>
-
-            {sendEmail == true ? <div className="mt-24">test</div> : null}
+          </div>
+        </section>
+        <section className="mt-24">
+          <h1 className="font-semibold text-3xl sm:text-5xl">Get in touch</h1>
+          <p className="text-sm sm:text-xl leading-7 sm:leading-9 mt-5 sm:mt-10">
+            Follow us on our offical platforms to get the latest updates.
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-10">
+            {social.map((social) => (
+              <Link key={social.sys.id} href={social.fields.link}>
+                <a className="text-center rounded-3xl py-5 leading-relaxed bg-gray-200 hover:bg-redBtn" target="blank">
+                  <h3 className="text-lg font-medium">{social.fields.title}</h3>
+                </a>
+              </Link>
+            ))}
           </div>
         </section>
       </Layout>

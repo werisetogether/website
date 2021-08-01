@@ -52,7 +52,6 @@ export const getStaticProps = async ({ params }) => {
 
 export default function RecipeDetails({ gallery, donate }) {
   const { title, pictures, reference } = gallery.fields;
-  console.log(gallery);
   return (
     <div>
       <Head>

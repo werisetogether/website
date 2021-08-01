@@ -131,11 +131,11 @@ export default function About({ about, team }) {
                     alt="about us"
                   />
                 </div>
-                <div class="w-full">
-                  <div class="font-medium texl-xl sm:text-2xl">
+                <div className="w-full">
+                  <div className="font-medium texl-xl sm:text-2xl">
                     {team.fields.name}
                   </div>
-                  <div class="text-gray-500 texl-base sm:text-xl">
+                  <div className="text-gray-500 texl-base sm:text-xl">
                     <Link
                       href={
                         "https://twitter.com/" + team.fields.twitterUsername
