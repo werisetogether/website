@@ -56,7 +56,7 @@ export default function Projects({ projects }) {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://website-sandy-three.vercel.app/projects"
+          content="https://www.werisetogetherfoundation.org/projects"
         />
         <meta property="og:title" content="We Rise Together — Projects" />
         <meta
@@ -70,7 +70,7 @@ export default function Projects({ projects }) {
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content="https://website-sandy-three.vercel.app/projects"
+          content="https://www.werisetogetherfoundation.org/projects"
         />
         <meta property="twitter:title" content="We Rise Together — Projects" />
         <meta

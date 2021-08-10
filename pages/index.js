@@ -59,7 +59,7 @@ export default function Home({ about, projects, donate }) {
           <meta property="og:type" content="website" />
           <meta
             property="og:url"
-            content="https://website-sandy-three.vercel.app/"
+            content="https://www.werisetogetherfoundation.org/"
           />
           <meta
             property="og:title"
@@ -76,7 +76,7 @@ export default function Home({ about, projects, donate }) {
           <meta property="twitter:card" content="summary_large_image" />
           <meta
             property="twitter:url"
-            content="https://website-sandy-three.vercel.app/"
+            content="https://www.werisetogetherfoundation.org/"
           />
           <meta
             property="twitter:title"

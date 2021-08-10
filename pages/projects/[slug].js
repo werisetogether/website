@@ -75,7 +75,7 @@ export default function RecipeDetails({ project, donate }) {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content={"https://website-sandy-three.vercel.app/" + slug}
+          content={"https://www.werisetogetherfoundation.org/" + slug}
         />
         <meta property="og:title" content={"We Rise Together - " + title} />
         <meta
@@ -92,7 +92,7 @@ export default function RecipeDetails({ project, donate }) {
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content={"https://website-sandy-three.vercel.app/" + slug}
+          content={"https://www.werisetogetherfoundation.org/" + slug}
         />
         <meta
           property="twitter:title"

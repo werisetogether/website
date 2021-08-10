@@ -59,7 +59,7 @@ export default function Contact({social}) {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://website-sandy-three.vercel.app/contact"
+          content="https://www.werisetogetherfoundation.org/contact"
         />
         <meta property="og:title" content="We Rise Together — Contact" />
         <meta
@@ -73,7 +73,7 @@ export default function Contact({social}) {
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content="https://website-sandy-three.vercel.app/contact"
+          content="https://www.werisetogetherfoundation.org/contact"
         />
         <meta property="twitter:title" content="We Rise Together — Contact" />
         <meta

@@ -56,7 +56,7 @@ export default function About({ about, team }) {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://website-sandy-three.vercel.app/about"
+          content="https://www.werisetogetherfoundation.org/about"
         />
         <meta property="og:title" content="We Rise Together — About" />
         <meta
@@ -70,7 +70,7 @@ export default function About({ about, team }) {
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content="https://website-sandy-three.vercel.app/about"
+          content="https://www.werisetogetherfoundation.org/about"
         />
         <meta property="twitter:title" content="We Rise Together — About" />
         <meta

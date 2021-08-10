@@ -52,7 +52,7 @@ export default function Donate({ link }) {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://website-sandy-three.vercel.app/donate"
+          content="https://www.werisetogetherfoundation.org/donate"
         />
         <meta property="og:title" content="We Rise Together — Donate" />
         <meta
@@ -66,7 +66,7 @@ export default function Donate({ link }) {
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content="https://website-sandy-three.vercel.app/donate"
+          content="https://www.werisetogetherfoundation.org/donate"
         />
         <meta property="twitter:title" content="We Rise Together — Donate" />
         <meta
