@@ -41,7 +41,7 @@ export default function Donate({ link }) {
         />
         <meta
           name="keywords"
-          content="werisetogether, we rise together, non profit organisation, menstrual hygiene, ngo india, shreya tuli, aarava seth, sunday4securedfuture, s4sf, shehygiene, she hygiene, helping hands"
+          content="werisetogether, werisetogether foundation, we rise together foundation, we rise together, non profit organisation, menstrual hygiene, ngo india, shreya tuli, aarava seth, sunday4securedfuture, s4sf, shehygiene, she hygiene, helping hands"
         />
         <meta name="robots" content="index, follow" />
         <meta name="language" content="English" />
@@ -73,7 +73,10 @@ export default function Donate({ link }) {
           property="twitter:description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"
         />
-        <meta property="twitter:image" content="https://i.imgur.com/p68Dwwz.png" />
+        <meta
+          property="twitter:image"
+          content="https://i.imgur.com/p68Dwwz.png"
+        />
         <meta name="twitter:image:alt" content="We Rise Together" />
       </Head>
       <Layout>

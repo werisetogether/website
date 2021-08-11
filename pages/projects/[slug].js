@@ -64,7 +64,7 @@ export default function RecipeDetails({ project, donate }) {
         />
         <meta
           name="keywords"
-          content="werisetogether, we rise together, non profit organisation, menstrual hygiene, ngo india, shreya tuli, aarava seth, sunday4securedfuture, s4sf, shehygiene, she hygiene, helping hands"
+          content="werisetogether, werisetogether foundation, we rise together foundation, we rise together, non profit organisation, menstrual hygiene, ngo india, shreya tuli, aarava seth, sunday4securedfuture, s4sf, shehygiene, she hygiene, helping hands"
         />
         <meta name="robots" content="index, follow" />
         <meta name="language" content="English" />
