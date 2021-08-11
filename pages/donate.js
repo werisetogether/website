@@ -47,6 +47,10 @@ export default function Donate({ link }) {
         <meta name="language" content="English" />
         <meta name="revisit-after" content="1 days" />
         <meta name="author" content="We Rise Together" />
+        <meta
+          name="google-site-verification"
+          content="BjWqAaLp8AyqUryXb0wkuIFCIfWdc4bobIjUDgeYd0I"
+        />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
