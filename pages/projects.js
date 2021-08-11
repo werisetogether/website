@@ -55,6 +55,7 @@ export default function Projects({ projects }) {
           name="google-site-verification"
           content="BjWqAaLp8AyqUryXb0wkuIFCIfWdc4bobIjUDgeYd0I"
         />
+        <meta name="msvalidate.01" content="E5F9D56E6DAF681D98D6E0B41D10462E" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
