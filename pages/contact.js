@@ -66,7 +66,7 @@ export default function Contact({social}) {
           property="og:description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"
         />
-        <meta property="og:image" content={HeaderIMG} />
+        <meta property="og:image" content="https://i.imgur.com/p68Dwwz.png" />
         <meta property="og:locale" content="en_GB" />
 
         {/* Twitter */}
@@ -80,7 +80,7 @@ export default function Contact({social}) {
           property="twitter:description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"
         />
-        <meta property="twitter:image" content={HeaderIMG} />
+        <meta property="twitter:image" content="https://i.imgur.com/p68Dwwz.png" />
         <meta name="twitter:image:alt" content="We Rise Together" />
       </Head>
       <Layout>
