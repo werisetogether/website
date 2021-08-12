@@ -55,7 +55,7 @@ export default function About({ about, team }) {
           content="BjWqAaLp8AyqUryXb0wkuIFCIfWdc4bobIjUDgeYd0I"
         />
         <meta name="msvalidate.01" content="E5F9D56E6DAF681D98D6E0B41D10462E" />
-        <link rel="preload" href="https://i.imgur.com/p68Dwwz.png" />
+        <link rel="preload" href="https://i.imgur.com/p68Dwwz.png" as="image" />
         <link rel="preconnect" href="https://i.imgur.com/p68Dwwz.png" />
 
         {/* Open Graph */}
@@ -64,7 +64,10 @@ export default function About({ about, team }) {
           property="og:url"
           content="https://www.werisetogetherfoundation.org/about"
         />
-        <meta property="og:title" content="We Rise Together Foundation — About" />
+        <meta
+          property="og:title"
+          content="We Rise Together Foundation — About"
+        />
         <meta
           property="og:description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"
@@ -78,7 +81,10 @@ export default function About({ about, team }) {
           property="twitter:url"
           content="https://www.werisetogetherfoundation.org/about"
         />
-        <meta property="twitter:title" content="We Rise Together Foundation — About" />
+        <meta
+          property="twitter:title"
+          content="We Rise Together Foundation — About"
+        />
         <meta
           property="twitter:description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"

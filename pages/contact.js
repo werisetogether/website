@@ -57,7 +57,7 @@ export default function Contact({social}) {
           content="BjWqAaLp8AyqUryXb0wkuIFCIfWdc4bobIjUDgeYd0I"
         />
         <meta name="msvalidate.01" content="E5F9D56E6DAF681D98D6E0B41D10462E" />
-        <link rel="preload" href="https://i.imgur.com/p68Dwwz.png" />
+        <link rel="preload" href="https://i.imgur.com/p68Dwwz.png" as="image" />
         <link rel="preconnect" href="https://i.imgur.com/p68Dwwz.png" />
 
         {/* Open Graph */}
