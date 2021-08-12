@@ -36,7 +36,7 @@ export default function Projects({ projects }) {
       <Head>
         {/* Genral Tags */}
         <title>We Rise Together — Projects</title>
-        <meta name="title" content="We Rise Together Foundation Foundation — Projects" />
+        <meta name="title" content="We Rise Together Foundation — Projects" />
         <meta
           name="description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"

@@ -57,7 +57,7 @@ export default function RecipeDetails({ project, donate }) {
       <Head>
         {/* Genral Tags */}
         <title>We Rise Together — {title}</title>
-        <meta name="title" content={"We Rise Together Foundation Foundation - " + title} />
+        <meta name="title" content={"We Rise Together Foundation - " + title} />
         <meta
           name="description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"

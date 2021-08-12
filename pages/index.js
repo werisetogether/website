@@ -39,7 +39,7 @@ export default function Home({ about, projects, donate }) {
           <title>We Rise Together — Inspire, Aid and Empower</title>
           <meta
             name="title"
-            content="We Rise Together Foundation Foundation — Inspire, Aid and Empower"
+            content="We Rise Together Foundation — Inspire, Aid and Empower"
           />
           <meta
             name="description"
