@@ -38,7 +38,7 @@ export default function Contact({social}) {
     <div>
       <Head>
         {/* Genral Tags */}
-        <title>We Rise Together — Contact</title>
+        <title>We Rise Together Foundation — Contact</title>
         <meta name="title" content="We Rise Together Foundation — Contact" />
         <meta
           name="description"
@@ -66,7 +66,10 @@ export default function Contact({social}) {
           property="og:url"
           content="https://www.werisetogetherfoundation.org/contact"
         />
-        <meta property="og:title" content="We Rise Together Foundation — Contact" />
+        <meta
+          property="og:title"
+          content="We Rise Together Foundation — Contact"
+        />
         <meta
           property="og:description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"
@@ -80,7 +83,10 @@ export default function Contact({social}) {
           property="twitter:url"
           content="https://www.werisetogetherfoundation.org/contact"
         />
-        <meta property="twitter:title" content="We Rise Together Foundation — Contact" />
+        <meta
+          property="twitter:title"
+          content="We Rise Together Foundation — Contact"
+        />
         <meta
           property="twitter:description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"

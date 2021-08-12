@@ -36,7 +36,7 @@ export default function Home({ about, projects, donate }) {
       <div>
         <Head>
           {/* Genral Tags */}
-          <title>We Rise Together — Inspire, Aid and Empower</title>
+          <title>We Rise Together Foundation — Inspire, Aid and Empower</title>
           <meta
             name="title"
             content="We Rise Together Foundation — Inspire, Aid and Empower"
@@ -99,7 +99,10 @@ export default function Home({ about, projects, donate }) {
             property="twitter:image"
             content="https://i.imgur.com/p68Dwwz.png"
           />
-          <meta name="twitter:image:alt" content="We Rise Together Foundation" />
+          <meta
+            name="twitter:image:alt"
+            content="We Rise Together Foundation"
+          />
         </Head>
         <main>
           <Layout>

@@ -56,7 +56,7 @@ export default function RecipeDetails({ project, donate }) {
     <div>
       <Head>
         {/* Genral Tags */}
-        <title>We Rise Together — {title}</title>
+        <title>We Rise Together Foundation — {title}</title>
         <meta name="title" content={"We Rise Together Foundation - " + title} />
         <meta
           name="description"
@@ -84,7 +84,10 @@ export default function RecipeDetails({ project, donate }) {
           property="og:url"
           content={"https://www.werisetogetherfoundation.org/" + slug}
         />
-        <meta property="og:title" content={"We Rise Together Foundation - " + title} />
+        <meta
+          property="og:title"
+          content={"We Rise Together Foundation - " + title}
+        />
         <meta
           property="og:description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"

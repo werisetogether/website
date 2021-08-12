@@ -35,7 +35,7 @@ export default function Projects({ projects }) {
     <div>
       <Head>
         {/* Genral Tags */}
-        <title>We Rise Together — Projects</title>
+        <title>We Rise Together Foundation — Projects</title>
         <meta name="title" content="We Rise Together Foundation — Projects" />
         <meta
           name="description"
@@ -63,7 +63,10 @@ export default function Projects({ projects }) {
           property="og:url"
           content="https://www.werisetogetherfoundation.org/projects"
         />
-        <meta property="og:title" content="We Rise Together Foundation — Projects" />
+        <meta
+          property="og:title"
+          content="We Rise Together Foundation — Projects"
+        />
         <meta
           property="og:description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"
@@ -77,7 +80,10 @@ export default function Projects({ projects }) {
           property="twitter:url"
           content="https://www.werisetogetherfoundation.org/projects"
         />
-        <meta property="twitter:title" content="We Rise Together Foundation — Projects" />
+        <meta
+          property="twitter:title"
+          content="We Rise Together Foundation — Projects"
+        />
         <meta
           property="twitter:description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"

@@ -36,7 +36,7 @@ export default function About({ about, team }) {
     <div>
       <Head>
         {/* Genral Tags */}
-        <title>We Rise Together — About</title>
+        <title>We Rise Together Foundation — About</title>
         <meta name="title" content="We Rise Together Foundation — About" />
         <meta
           name="description"

@@ -32,7 +32,7 @@ export default function Donate({ link }) {
     <div>
       <Head>
         {/* Genral Tags */}
-        <title>We Rise Together — Donate</title>
+        <title>We Rise Together Foundation — Donate</title>
         <meta name="title" content="We Rise Together Foundation — Donate" />
         <meta
           name="description"
@@ -60,7 +60,10 @@ export default function Donate({ link }) {
           property="og:url"
           content="https://www.werisetogetherfoundation.org/donate"
         />
-        <meta property="og:title" content="We Rise Together Foundation — Donate" />
+        <meta
+          property="og:title"
+          content="We Rise Together Foundation — Donate"
+        />
         <meta
           property="og:description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"
@@ -74,7 +77,10 @@ export default function Donate({ link }) {
           property="twitter:url"
           content="https://www.werisetogetherfoundation.org/donate"
         />
-        <meta property="twitter:title" content="We Rise Together Foundation — Donate" />
+        <meta
+          property="twitter:title"
+          content="We Rise Together Foundation — Donate"
+        />
         <meta
           property="twitter:description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"
