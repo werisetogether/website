@@ -51,7 +51,7 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export default function RecipeDetails({ gallery, donate }) {
-  const { title, pictures, reference } = gallery.fields;
+  const { title, pictures, slug } = gallery.fields;
   return (
     <div>
       <Head>
