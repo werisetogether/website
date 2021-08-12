@@ -57,7 +57,7 @@ export default function RecipeDetails({ project, donate }) {
       <Head>
         {/* Genral Tags */}
         <title>We Rise Together — {title}</title>
-        <meta name="title" content={"We Rise Together - " + title} />
+        <meta name="title" content={"We Rise Together Foundation Foundation - " + title} />
         <meta
           name="description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"
@@ -69,12 +69,14 @@ export default function RecipeDetails({ project, donate }) {
         <meta name="robots" content="index, follow" />
         <meta name="language" content="English" />
         <meta name="revisit-after" content="1 days" />
-        <meta name="author" content="We Rise Together" />
+        <meta name="author" content="We Rise Together Foundation" />
         <meta
           name="google-site-verification"
           content="BjWqAaLp8AyqUryXb0wkuIFCIfWdc4bobIjUDgeYd0I"
         />
         <meta name="msvalidate.01" content="E5F9D56E6DAF681D98D6E0B41D10462E" />
+        <link rel="preload" href="https://i.imgur.com/p68Dwwz.png" />
+        <link rel="preconnect" href="https://i.imgur.com/p68Dwwz.png" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
@@ -82,7 +84,7 @@ export default function RecipeDetails({ project, donate }) {
           property="og:url"
           content={"https://www.werisetogetherfoundation.org/" + slug}
         />
-        <meta property="og:title" content={"We Rise Together - " + title} />
+        <meta property="og:title" content={"We Rise Together Foundation - " + title} />
         <meta
           property="og:description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"
@@ -101,7 +103,7 @@ export default function RecipeDetails({ project, donate }) {
         />
         <meta
           property="twitter:title"
-          content={"We Rise Together - " + title}
+          content={"We Rise Together Foundation - " + title}
         />
         <meta
           property="twitter:description"
@@ -111,7 +113,7 @@ export default function RecipeDetails({ project, donate }) {
           property="twitter:image"
           content={"https:" + thumbnail.fields.file.url}
         />
-        <meta name="twitter:image:alt" content="We Rise Together" />
+        <meta name="twitter:image:alt" content="We Rise Together Foundation" />
       </Head>
       <Layout>
         <section className="">

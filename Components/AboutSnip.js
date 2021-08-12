@@ -35,7 +35,7 @@ export default function AboutSnip({about}) {
           className="rounded-3xl"
           layout="fill"
           objectFit="contain"
-          alt="We Rise Together Logo"
+          alt="We Rise Together Foundation Logo"
         />
       </div>
     </div>

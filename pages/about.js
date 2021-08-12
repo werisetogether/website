@@ -1,6 +1,5 @@
 import Layout from "../Components/Layout";
 import Link from "next/link";
-import HeaderIMG from "../public/header.png";
 import Image from "next/image";
 import { createClient } from "contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
@@ -38,7 +37,7 @@ export default function About({ about, team }) {
       <Head>
         {/* Genral Tags */}
         <title>We Rise Together — About</title>
-        <meta name="title" content="We Rise Together — About" />
+        <meta name="title" content="We Rise Together Foundation — About" />
         <meta
           name="description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"
@@ -50,12 +49,14 @@ export default function About({ about, team }) {
         <meta name="robots" content="index, follow" />
         <meta name="language" content="English" />
         <meta name="revisit-after" content="1 days" />
-        <meta name="author" content="We Rise Together" />
+        <meta name="author" content="We Rise Together Foundation" />
         <meta
           name="google-site-verification"
           content="BjWqAaLp8AyqUryXb0wkuIFCIfWdc4bobIjUDgeYd0I"
         />
         <meta name="msvalidate.01" content="E5F9D56E6DAF681D98D6E0B41D10462E" />
+        <link rel="preload" href="https://i.imgur.com/p68Dwwz.png" />
+        <link rel="preconnect" href="https://i.imgur.com/p68Dwwz.png" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
@@ -63,7 +64,7 @@ export default function About({ about, team }) {
           property="og:url"
           content="https://www.werisetogetherfoundation.org/about"
         />
-        <meta property="og:title" content="We Rise Together — About" />
+        <meta property="og:title" content="We Rise Together Foundation — About" />
         <meta
           property="og:description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"
@@ -77,7 +78,7 @@ export default function About({ about, team }) {
           property="twitter:url"
           content="https://www.werisetogetherfoundation.org/about"
         />
-        <meta property="twitter:title" content="We Rise Together — About" />
+        <meta property="twitter:title" content="We Rise Together Foundation — About" />
         <meta
           property="twitter:description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"
@@ -86,7 +87,7 @@ export default function About({ about, team }) {
           property="twitter:image"
           content="https://i.imgur.com/p68Dwwz.png"
         />
-        <meta name="twitter:image:alt" content="We Rise Together" />
+        <meta name="twitter:image:alt" content="We Rise Together Foundation" />
       </Head>
       <Layout>
         <section className="">

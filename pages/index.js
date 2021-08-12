@@ -4,7 +4,6 @@ import Header from "../Components/Header";
 import ProjectSnip from "../Components/ProjectSnip";
 import AboutSnip from "../Components/AboutSnip";
 import DonateSnip from "../Components/DonateSnip";
-import HeaderIMG from "../public/header.png";
 import { createClient } from "contentful";
 import Link from "next/link";
 
@@ -40,7 +39,7 @@ export default function Home({ about, projects, donate }) {
           <title>We Rise Together — Inspire, Aid and Empower</title>
           <meta
             name="title"
-            content="We Rise Together — Inspire, Aid and Empower"
+            content="We Rise Together Foundation Foundation — Inspire, Aid and Empower"
           />
           <meta
             name="description"
@@ -53,7 +52,7 @@ export default function Home({ about, projects, donate }) {
           <meta name="robots" content="index, follow" />
           <meta name="language" content="English" />
           <meta name="revisit-after" content="1 days" />
-          <meta name="author" content="We Rise Together" />
+          <meta name="author" content="We Rise Together Foundation" />
           <meta
             name="google-site-verification"
             content="BjWqAaLp8AyqUryXb0wkuIFCIfWdc4bobIjUDgeYd0I"
@@ -62,7 +61,9 @@ export default function Home({ about, projects, donate }) {
             name="msvalidate.01"
             content="E5F9D56E6DAF681D98D6E0B41D10462E"
           />
-          
+          <link rel="preload" href="https://i.imgur.com/p68Dwwz.png" />
+          <link rel="preconnect" href="https://i.imgur.com/p68Dwwz.png" />
+
           {/* Open Graph */}
           <meta property="og:type" content="website" />
           <meta
@@ -71,7 +72,7 @@ export default function Home({ about, projects, donate }) {
           />
           <meta
             property="og:title"
-            content="We Rise Together — Inspire, Aid and Empower"
+            content="We Rise Together Foundation — Inspire, Aid and Empower"
           />
           <meta
             property="og:description"
@@ -88,7 +89,7 @@ export default function Home({ about, projects, donate }) {
           />
           <meta
             property="twitter:title"
-            content="We Rise Together — Inspire, Aid and Empower"
+            content="We Rise Together Foundation — Inspire, Aid and Empower"
           />
           <meta
             property="twitter:description"
@@ -98,7 +99,7 @@ export default function Home({ about, projects, donate }) {
             property="twitter:image"
             content="https://i.imgur.com/p68Dwwz.png"
           />
-          <meta name="twitter:image:alt" content="We Rise Together" />
+          <meta name="twitter:image:alt" content="We Rise Together Foundation" />
         </Head>
         <main>
           <Layout>
