@@ -1,7 +1,7 @@
 import { Menu, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment } from "react";
 
 const navigation = [
   { name: "Projects", href: "/projects" },
