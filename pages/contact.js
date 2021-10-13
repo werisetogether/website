@@ -26,7 +26,7 @@ export default function Contact({social}) {
 
     emailjs
       .sendForm(
-        "service_h9i9os2",
+        "service_iyq5kil",
         "template_9srk6kn",
         e.target,
         "user_9nWLqvNaOVIEZ5fm1y8D6"
