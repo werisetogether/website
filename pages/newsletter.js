@@ -97,7 +97,7 @@ export default function newsletter({ newsletters }) {
                 Check out our monthly newsletters.
               </p>
             </div>
-            {newsletters != null ? (
+            {newsletters != 0 ? (
               <div className="flex flex-col gap-4">
                 {newsletters.map((newsletter) => (
                   <Link
