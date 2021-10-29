@@ -5,6 +5,7 @@ import React, { Fragment } from "react";
 
 const navigation = [
   { name: "Projects", href: "/projects" },
+  { name: "Newsletter", href: "/newsletter" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
   { name: "Donate", href: "/donate" },
@@ -48,7 +49,7 @@ export default function Navbar() {
                   </Link>
                 </div>
                 <div className="hidden sm:block sm:ml-6 absolute right-0 self-center">
-                  <div className="flex space-x-4">
+                  <div className="flex space-x-2">
                     {navigation.map((item) => (
                       <Link key={item.name} href={item.href}>
                         <a className=" text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-semibold">

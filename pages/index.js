@@ -118,7 +118,7 @@ export default function Home({ about, projects, donate }) {
                 ))}
                 <Link href="/projects">
                   <a className="sm:col-span-2">
-                    <button className="focus:outline-none border-2 border-black rounded-3xl px-8 py-4 text-lg sm:text-xl font-semibold flex justify-center w-full h-full items-center">
+                    <button className="focus:outline-none border-2 border-black rounded-xl px-8 py-4 text-lg sm:text-xl font-semibold flex justify-center w-full h-full items-center">
                       See Projects
                     </button>
                   </a>

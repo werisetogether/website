@@ -2,8 +2,10 @@ import { createClient } from "contentful";
 import Image from "next/image";
 import Layout from "../../Components/Layout";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import DonateSnip from "../../Components/DonateSnip";
 import Head from "next/head";
+import Moment from "react-moment";
 import Link from "next/link";
 
 const renderOptions = {
@@ -11,6 +13,38 @@ const renderOptions = {
     return text.split("\n").reduce((children, textSegment, index) => {
       return [...children, index > 0 && <br key={index} />, textSegment];
     }, []);
+  },
+  renderNode: {
+    [BLOCKS.EMBEDDED_ASSET]: (node) => {
+      return (
+        <div className="my-6 h-96 w-full relative">
+          <Image
+            className="rounded-xl h-full w-full"
+            src={`https:${node.data.target.fields.file.url}`}
+            objectFit="cover"
+            layout="fill"
+            width={node.data.target.fields.file.details.image.width}
+            height={node.data.target.fields.file.details.image.height}
+          />
+        </div>
+      );
+    },
+    [INLINES.ENTRY_HYPERLINK]: (node) => {
+      return (
+        <a
+          href={`/projects/${node.data.target.fields.slug}`}
+          className="underline"
+        >
+          {" "}
+          {node.data.target.fields.title}
+        </a>
+      );
+    },
+    [INLINES.HYPERLINK]: ({ data }, children) => (
+      <a href={data.uri} className="underline">
+        {children}
+      </a>
+    ),
   },
 };
 
@@ -21,7 +55,7 @@ const client = createClient({
 
 export const getStaticPaths = async () => {
   const res = await client.getEntries({
-    content_type: "singleProject",
+    content_type: "newsletter",
   });
 
   const paths = res.items.map((item) => {
@@ -38,20 +72,20 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
   const { items } = await client.getEntries({
-    content_type: "singleProject",
+    content_type: "newsletter",
     "fields.slug": params.slug,
   });
 
   const donate = await client.getEntries({ content_type: "donationLink" });
 
   return {
-    props: { project: items[0], donate: donate.items },
+    props: { newsletter: items[0], donate: donate.items },
     revalidate: 10,
   };
 };
 
-export default function RecipeDetails({ project, donate }) {
-  const { title, slug, description, thumbnail, gallery } = project.fields;
+export default function RecipeDetails({ newsletter, donate }) {
+  const { title, slug, content, thumbnail, date, author } = newsletter.fields;
   return (
     <div>
       <Head>
@@ -132,43 +166,26 @@ export default function RecipeDetails({ project, donate }) {
               </div>
               <div className="flex flex-wrap w-full my-10">
                 <div className="w-full">
-                  <div className="sm:text-3xl text-2xl font-medium title-font mb-2 break-all">
-                    {title}
+                  <div className="mb-2">
+                    <h1 className="font-medium text-2xl sm:text-3xl title-font pb-2">
+                      {" "}
+                      {title}
+                    </h1>
+                    <span className="uppercase">
+                      <Moment format="MMMM">{newsletter.fields.date}</Moment>{" "}
+                      Edition{" "}
+                    </span>
+                    <span> by {author}</span>
                   </div>
                   <div className="h-1 w-20 bg-redBtn rounded"></div>
                 </div>
               </div>
               <div className="text-sm sm:text-xl leading-7 sm:leading-9 font-normal">
-                {documentToReactComponents(description, renderOptions)}
+                {documentToReactComponents(content, renderOptions)}
               </div>
             </div>
           </div>
         </section>
-        {gallery != null ? (
-          <div className="mt-24">
-            <h1 className="font-semibold text-3xl sm:text-5xl">Gallery</h1>
-            <p className="text-sm sm:text-xl leading-7 sm:leading-9 mt-5 sm:mt-10">
-              We gained a lot of unforgettable memories from all the events we
-              do. Have a peek at how our event look like by clicking on the
-              cards below.
-            </p>
-            <div className="grid grid-cols-2 gap-2 mt-7">
-              {gallery.map((gallery) => (
-                <Link
-                  key={gallery.sys.id}
-                  gallery={gallery}
-                  href={"/gallery/" + gallery.fields.slug}
-                >
-                  <a className="border-2 border-black hover:bg-gray-100 p-4 rounded-xl text-center">
-                    <h3 className="text-lg font-medium">
-                      {gallery.fields.title}
-                    </h3>
-                  </a>
-                </Link>
-              ))}
-            </div>
-          </div>
-        ) : null}
 
         <DonateSnip donate={donate} />
       </Layout>

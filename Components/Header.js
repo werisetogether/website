@@ -10,7 +10,7 @@ const Header = () => {
       <div className="relative h-40 sm:h-80">
         <Image
           src={HeaderIMG}
-          className="rounded-3xl"
+          className="rounded-xl"
           alt="Header image"
           layout="fill"
           objectFit="cover"

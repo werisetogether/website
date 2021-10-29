@@ -5,38 +5,29 @@ import { createClient } from "contentful";
 import Moment from "react-moment";
 import Head from "next/head";
 
-const renderOptions = {
-  renderText: (text) => {
-    return text.split("\n").reduce((children, textSegment, index) => {
-      return [...children, index > 0 && <br key={index} />, textSegment];
-    }, []);
-  },
-};
-
 export async function getStaticProps() {
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   });
 
-  const res = await client.getEntries({ content_type: "singleProject" });
+  const res = await client.getEntries({ content_type: "newsletter" });
 
   return {
     props: {
-      projects: res.items,
+      newsletters: res.items,
       revalidate: 10,
     },
   };
-
 }
 
-export default function Projects({ projects }) {
+export default function newsletter({ newsletters }) {
   return (
     <div>
       <Head>
         {/* Genral Tags */}
-        <title>We Rise Together Foundation — Projects</title>
-        <meta name="title" content="We Rise Together Foundation — Projects" />
+        <title>We Rise Together Foundation — Newsletter</title>
+        <meta name="title" content="We Rise Together Foundation — Newsletter" />
         <meta
           name="description"
           content="A non-profit organisation in India working towards the welfare of society and its surroundings"
@@ -59,11 +50,11 @@ export default function Projects({ projects }) {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.werisetogetherfoundation.org/projects"
+          content="https://www.werisetogetherfoundation.org/newsletter"
         />
         <meta
           property="og:title"
-          content="We Rise Together Foundation — Projects"
+          content="We Rise Together Foundation — Newsletter"
         />
         <meta
           property="og:description"
@@ -76,11 +67,11 @@ export default function Projects({ projects }) {
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content="https://www.werisetogetherfoundation.org/projects"
+          content="https://www.werisetogetherfoundation.org/newsletter"
         />
         <meta
           property="twitter:title"
-          content="We Rise Together Foundation — Projects"
+          content="We Rise Together Foundation — Newsletter"
         />
         <meta
           property="twitter:description"
@@ -98,64 +89,51 @@ export default function Projects({ projects }) {
             <div className="flex flex-wrap w-full mb-10">
               <div className="w-full mb-6">
                 <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-                  Our Projects
+                  Our Newsletters
                 </h1>
                 <div className="h-2 w-20 bg-redBtn rounded"></div>
               </div>
               <p className="text-sm sm:text-xl leading-7 sm:leading-9 font-normal">
-                We Rise Together Foundation has always looked forward to helping
-                people in all areas, be it sanitation and hygiene through She
-                Hygiene, better lifestyle through Helping hands, or a healthy
-                nature through Sunday4SecuredFuture.
-                <br />
-                <br />
-                We are trying our level best to keep up with our work and to
-                bring happiness through our initiatives but we need your support
-                and kind gestures to move forward. Donate now to help those who
-                need it the most!
+                Check out our monthly newsletters.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {projects.map((project) => (
-                <Link
-                  key={project.sys.id}
-                  project={project}
-                  href={"/projects/" + project.fields.slug}
-                >
-                  <a>
-                    <div className="border-2 border-black hover:bg-gray-100 p-2 rounded-xl">
-                      <div className="h-48 sm:h-80 mb-5 relative">
-                        <Image
-                          src={
-                            "https:" + project.fields.thumbnail.fields.file.url
-                          }
-                          className="rounded-xl"
-                          layout="fill"
-                          objectFit="cover"
-                          about={project.fields.title}
-                        />
-                      </div>
-                      <div className="px-3">
-                        <span className="text-xs text-gray-600 font-semibold mb-3">
-                          <Moment format="YYYY/MM/DD">
-                            {project.fields.date}
-                          </Moment>
+            {newsletters != null ? (
+              <div className="flex flex-col gap-4">
+                {newsletters.map((newsletter) => (
+                  <Link
+                    key={newsletter.sys.id}
+                    newsletter={newsletter}
+                    href={"/newsletter/" + newsletter.fields.slug}
+                  >
+                    <a className="p-4 flex flex-wrap gap-4 md:flex-nowrap border-2 border-black rounded-xl hover:bg-gray-100">
+                      <div className="md:w-64 mt-1 flex-shrink-0 flex flex-col">
+                        <span className="font-semibold text-sm text-gray-700 uppercase">
+                          <Moment format="MMMM">
+                            {newsletter.fields.date}
+                          </Moment>{" "}
+                          Edition
                         </span>
-                        <h2 className="text-xl sm:text-2xl overflow-clip overflow-hidden text-gray-900 font-medium mb-4">
-                          {project.fields.title}
-                        </h2>
-                        <div className="leading-relaxed text-sm sm:text-base pb-2">
-                          {project.fields.shortDescription}
-                        </div>
                       </div>
-                    </div>
-                  </a>
-                </Link>
-              ))}
-            </div>
+                      <div className="md:flex-grow">
+                        <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">
+                          {newsletter.fields.title}
+                        </h2>
+                        <p className="prose line-clamp-2">
+                          {newsletter.fields.description}
+                        </p>
+                      </div>
+                    </a>
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <div className="p-4 border-2 border-black mt-4 rounded-xl text-center">
+                No newsletters yet
+              </div>
+            )}
           </div>
         </section>
       </Layout>
     </div>
   );
-};
+}

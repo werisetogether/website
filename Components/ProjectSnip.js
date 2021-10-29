@@ -9,7 +9,7 @@ export default function Projects({ project }) {
     <div className="">
       <Link key={project.sys.id} project={project} href={"/projects/" + slug}>
         <a>
-          <div className="border-2 border-black hover:bg-gray-100 p-4 rounded-3xl">
+          <div className="border-2 border-black hover:bg-gray-100 p-4 rounded-xl">
             <div className="h-48 sm:h-80 mb-5 relative">
               <Image
                 src={"https:" + thumbnail.fields.file.url}

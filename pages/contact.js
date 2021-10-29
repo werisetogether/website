@@ -155,7 +155,7 @@ export default function Contact({social}) {
                 />
               </div>
               <input
-                className="border-2 border-black bg-white hover:bg-gray-100 p-2 sm:p-4 rounded-3xl"
+                className="border-2 border-black bg-white hover:bg-gray-100 p-2 sm:p-4 rounded-xl"
                 type="submit"
                 value="Send Message"
               />
@@ -171,7 +171,7 @@ export default function Contact({social}) {
             {social.map((social) => (
               <Link key={social.sys.id} href={social.fields.link}>
                 <a
-                  className="text-center rounded-3xl py-5 leading-relaxed bg-gray-200 hover:bg-redBtn"
+                  className="text-center rounded-xl py-5 leading-relaxed bg-gray-200 hover:bg-redBtn"
                   target="blank"
                 >
                   <h3 className="text-lg font-medium">{social.fields.title}</h3>

@@ -17,7 +17,7 @@ export default function DonateSnip({ donate }) {
         {donate.map((link) => (
           <Link href={link.fields.link}>
             <a
-              className="font-medium text-2xl sm:text-4xl text-center rounded-3xl py-5 leading-relaxed bg-gray-200 hover:bg-redBtn"
+              className="font-medium text-2xl sm:text-4xl text-center rounded-xl py-5 leading-relaxed bg-gray-200 hover:bg-redBtn"
               target="blank"
             >
               {link.fields.name}

@@ -17,7 +17,7 @@ export default function AboutSnip({about}) {
       <div className="h-40 sm:h-80 my-7 sm:my-12 relative">
         <Image
           src={"https:" + about.thumbnail.fields.file.url}
-          className="rounded-3xl"
+          className="rounded-xl"
           layout="fill"
           objectFit="cover"
           alt="About Us"
@@ -32,7 +32,7 @@ export default function AboutSnip({about}) {
       <div className="h-48 sm:h-80 mt-24 relative">
         <Image
           src={"https:" + about.logo.fields.file.url}
-          className="rounded-3xl"
+          className="rounded-xl"
           layout="fill"
           objectFit="contain"
           alt="We Rise Together Foundation Logo"
