@@ -128,7 +128,7 @@ export default function newsletter({ newsletters }) {
               </div>
             ) : (
               <div className="p-4 border-2 border-black mt-4 rounded-xl text-center">
-                No newsletters yet
+                No newsletters
               </div>
             )}
           </div>
