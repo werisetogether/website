@@ -73,7 +73,7 @@ export default function newsletter({ newsletters }) {
 								<h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">WRT Mirror</h1>
 								<div className="h-2 w-20 bg-redBtn rounded"></div>
 							</div>
-							<p className="text-sm sm:text-xl leading-7 sm:leading-9 font-normal">Check out our newsletters to keep up to.</p>
+							<p className="text-sm sm:text-xl leading-7 sm:leading-9 font-normal">Check out our newsletter.</p>
 						</div>
 						{newsletters != 0 ? (
 							<div className="flex flex-col gap-4">
