@@ -2,13 +2,13 @@ import Layout from "../Components/Layout";
 import Link from "next/link";
 import Head from "next/head";
 import { createClient } from "contentful";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 export async function getStaticProps() {
   const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
-  });
+		space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+		accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_KEY,
+	});
 
   const social = await client.getEntries({ content_type: "socialLink" });
 
@@ -25,13 +25,13 @@ export default function Contact({social}) {
     e.preventDefault();
 
     emailjs
-      .sendForm(
-        "service_iyq5kil",
-        "template_9srk6kn",
-        e.target,
-        "user_9nWLqvNaOVIEZ5fm1y8D6"
-      )
-      .then(alert("Message sent! We'll get back to you as soon as possibe."));
+			.sendForm(
+				process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+				process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+				e.target,
+				process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+			)
+			.then(alert("Message sent! We'll get back to you as soon as possibe."));
   }
 
   return (
@@ -115,12 +115,12 @@ export default function Contact({social}) {
               onSubmit={sendEmail}
             >
               <div className="">
-                <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
+                <label className="block mb-2 text-sm font-medium text-gray-600">
                   Name
                 </label>
 
                 <input
-                  className="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+                  className="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
                   type="text"
                   placeholder="John Doe"
                   name="name"
@@ -129,12 +129,12 @@ export default function Contact({social}) {
               </div>
 
               <div className="">
-                <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
+                <label className="block mb-2 text-sm font-medium text-gray-600">
                   E-mail
                 </label>
 
                 <input
-                  className="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+                  className="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
                   type="email"
                   placeholder="johndoe@example.com"
                   name="email"
@@ -143,12 +143,12 @@ export default function Contact({social}) {
               </div>
 
               <div className="w-full mt-4 sm:col-span-2">
-                <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
+                <label className="block mb-2 text-sm font-medium text-gray-600">
                   Message
                 </label>
 
                 <textarea
-                  className="block w-full h-40 px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+                  className="block w-full h-40 px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
                   placeholder="Type in your message..."
                   name="message"
                   required
