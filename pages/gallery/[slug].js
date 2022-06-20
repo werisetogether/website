@@ -15,8 +15,8 @@ const renderOptions = {
 };
 
 const client = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID,
-  accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+	space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+	accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_KEY,
 });
 
 export const getStaticPaths = async () => {
@@ -50,7 +50,7 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
-export default function RecipeDetails({ gallery, donate }) {
+export default function Index({ gallery, donate }) {
   const { title, pictures, slug } = gallery.fields;
   return (
     <div>
@@ -134,12 +134,13 @@ export default function RecipeDetails({ gallery, donate }) {
               <a target="blank">
                 <div className="h-40 sm:h-80 relative">
                   <Image
-                    alt="content"
                     className="rounded h-full w-full"
                     objectFit="cover"
                     layout="fill"
                     src={"https:" + pictures.fields.file.url}
                     alt={pictures.fields.title}
+                    loading="lazy"
+                    quality={70}
                   />
                 </div>
               </a>

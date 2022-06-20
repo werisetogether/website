@@ -1,31 +1,31 @@
 {
-  "name": "we-rise",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "@contentful/rich-text-react-renderer": "^15.5.1",
-    "@headlessui/react": "^1.4.1",
-    "@heroicons/react": "^1.0.5",
-    "@tailwindcss/line-clamp": "^0.2.2",
-    "@tailwindcss/typography": "^0.4.1",
-    "contentful": "^9.1.4",
-    "emailjs-com": "^3.2.0",
-    "framer-motion": "^5.0.0",
-    "moment": "^2.29.1",
-    "next": "12.0.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-moment": "^1.1.1",
-    "react-rough-notation": "^1.0.1"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.0",
-    "postcss": "^8.3.11",
-    "tailwindcss": "^2.2.17"
-  }
+	"name": "we-rise",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start"
+	},
+	"dependencies": {
+		"@contentful/rich-text-react-renderer": "^15.12.1",
+		"@emailjs/browser": "^3.6.2",
+		"@headlessui/react": "^1.6.4",
+		"@heroicons/react": "^1.0.6",
+		"@tailwindcss/line-clamp": "^0.4.0",
+		"@tailwindcss/typography": "^0.5.2",
+		"contentful": "^9.1.32",
+		"framer-motion": "^6.3.11",
+		"moment": "^2.29.3",
+		"next": "^12.1.6",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-moment": "^1.1.2",
+		"react-rough-notation": "^1.0.2"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.7",
+		"postcss": "^8.4.14",
+		"tailwindcss": "^3.1.3"
+	}
 }
