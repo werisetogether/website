@@ -1,4 +1,5 @@
 import Link from "next/link";
+import moment from "moment";
 
 const Footer = () => {
   return (
@@ -58,7 +59,7 @@ const Footer = () => {
         </div>
 
         <p className="text-sm text-gray-600 pt-6 md:pt-0">
-          &copy; 2021 We Rise Together. All rights reserved.
+          &copy; {moment().year()} We Rise Together. All rights reserved.
         </p>
       </div>
     </footer>
