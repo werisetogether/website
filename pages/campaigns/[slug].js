@@ -65,7 +65,7 @@ const Slug = ({ project, donate }) => {
 			<Layout>
 				<header className="py-8 flex flex-col gap-4">
 					<div className="relative w-full h-[20rem] border rounded-xl overflow-clip">
-						<Image src={`https:${thumbnail.fields.file.url}`} layout="fill" objectFit="cover" priority />
+						<Image src={`https:${thumbnail.fields.file.url}`} alt="thumb" layout="fill" objectFit="cover" priority />
 					</div>
 					<h1 className="text-3xl text-center font-medium text-red-primary">{title}</h1>
 					<div className="text-center leading-7">{documentToReactComponents(description, renderOptions)}</div>

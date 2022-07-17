@@ -189,8 +189,8 @@ export default function Home({ homepage }) {
 							{Object.entries(homepage.founders).map(([index, item]) => (
 								<div key={index} className="relative">
 									<div className="bg-white shadow-md p-6 w-full md:w-2/3">
-										<div class="avatar md:hidden">
-											<div class="w-24 aspect-square relative rounded-full overflow-clip border">
+										<div className="avatar md:hidden">
+											<div className="w-24 aspect-square relative rounded-full overflow-clip border">
 												<Image
 													src={`https:${item.fields.profilePicture.fields.file.url}`}
 													layout="fill"

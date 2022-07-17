@@ -52,7 +52,7 @@ const Donate = ({ links }) => {
 			<Layout>
 				<section className="grid grid-cols-1 md:grid-cols-2 gap-4">
 					{Object.entries(links).map(([index, item]) => (
-						<Link href={item.fields.link}>
+						<Link key={index} href={item.fields.link}>
 							<a className={`btn ${index == 0 ? " border-transparent bg-red-primary" : " btn-outline"}`}>
 								{item.fields.name}
 							</a>

@@ -16,7 +16,7 @@ const Navbar = () => {
 			<div className="flex-1">
 				<Link href="/">
 					<a className="relative w-16 md:w-20 aspect-square">
-						<Image src={Logo} layout="fill" objectFit="contain" />
+						<Image src={Logo} layout="fill" objectFit="contain" alt="WRT"/>
 					</a>
 				</Link>
 			</div>

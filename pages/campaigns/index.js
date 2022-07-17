@@ -36,7 +36,7 @@ const Index = ({ projects }) => {
 			<Layout>
 				<header className="py-8 flex flex-col gap-4">
 					<div className="relative w-full h-[20rem]">
-						<Image src={campaignHeader} layout="fill" objectFit="contain" priority />
+						<Image src={campaignHeader} alt="Thumb" layout="fill" objectFit="contain" priority />
 					</div>
 					<h1 className="text-3xl text-center font-medium text-red-primary">Our Campaigns</h1>
 					<p className="text-center leading-7">

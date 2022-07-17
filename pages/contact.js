@@ -6,7 +6,7 @@ import Layout from "../components/Layout/Layout";
 import Navbar from "../components/Navbar/Navbar";
 
 const Contact = () => {
-  const sendEmail = async (event) => {
+	const sendEmail = async (event) => {
 		try {
 			event.preventDefault();
 
@@ -29,8 +29,8 @@ const Contact = () => {
 		} catch (error) {
 			console.log(error);
 		}
-  };
-  
+	};
+
 	return (
 		<div>
 			<Head>
@@ -43,7 +43,7 @@ const Contact = () => {
 			<Layout>
 				<header className="py-8 flex flex-col gap-4">
 					<h1 className="text-3xl font-medium text-red-primary">Contact</h1>
-					<p>Have a question you want to ask? Feel free to send us a message. We'll get back to you as soon as possible.</p>
+					<p>Have a question you want to ask? Feel free to send us a message. We will get back to you as soon as possible.</p>
 				</header>
 				<form className="form-control gap-2" onSubmit={sendEmail}>
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-2">
