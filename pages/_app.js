@@ -4,9 +4,9 @@ import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<div>
-      <Component {...pageProps} />
-      <Footer />
+		<div className="flex flex-col min-h-screen antialiased scroll-smooth">
+			<Component {...pageProps} />
+			<Footer />
 		</div>
 	);
 }

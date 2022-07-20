@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <url>
+    <loc>https://wrtdev.vercel.app/</loc>
+    <lastmod>2022-07-18T02:22:22+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://wrtdev.vercel.app/campaigns</loc>
+    <lastmod>2022-07-18T02:22:22+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://wrtdev.vercel.app/donate</loc>
+    <lastmod>2022-07-18T02:22:22+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://wrtdev.vercel.app/newsletter</loc>
+    <lastmod>2022-07-18T02:22:22+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://wrtdev.vercel.app/team</loc>
+    <lastmod>2022-07-18T02:22:22+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://wrtdev.vercel.app/contact</loc>
+    <lastmod>2022-07-18T02:22:22+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://wrtdev.vercel.app/campaigns/sunday4securedfuture</loc>
+    <lastmod>2022-07-18T02:22:22+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://wrtdev.vercel.app/campaigns/helping-hands</loc>
+    <lastmod>2022-07-18T02:22:22+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://wrtdev.vercel.app/campaigns/she-hygiene</loc>
+    <lastmod>2022-07-18T02:22:22+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://wrtdev.vercel.app/gallery</loc>
+    <lastmod>2022-07-18T02:22:22+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://wrtdev.vercel.app/gallery/sf4sf-drive</loc>
+    <lastmod>2022-07-18T02:22:22+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://wrtdev.vercel.app/gallery/helping-hands-drive-1</loc>
+    <lastmod>2022-07-18T02:22:22+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://wrtdev.vercel.app/gallery/she-hygiene-drives</loc>
+    <lastmod>2022-07-18T02:22:22+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+
+</urlset>
