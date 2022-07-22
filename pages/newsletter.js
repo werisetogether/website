@@ -1,10 +1,10 @@
-import Head from 'next/head';
-import React from 'react'
-import { ToastContainer } from 'react-toastify';
+import Head from "next/head";
+import React from "react";
+import { ToastContainer } from "react-toastify";
 import { createClient } from "contentful";
-import Layout from '../components/Layout/Layout';
-import Navbar from '../components/Navbar/Navbar';
-import Link from 'next/link';
+import Layout from "../components/Layout/Layout";
+import Navbar from "../components/Navbar/Navbar";
+import Link from "next/link";
 
 export async function getStaticProps() {
 	const client = createClient({
@@ -77,18 +77,22 @@ const Index = ({ newsletters }) => {
 				<section>
 					{newsletters != 0 ? (
 						<div className="flex flex-col gap-4">
-							{newsletters.map((newsletter) => (
-								<Link key={newsletter.sys.id} newsletter={newsletter} href={"https:" + newsletter.fields.pdf.fields.file.url}>
-									<a
-										target="blank"
-										className="p-4 flex flex-wrap gap-4 md:flex-nowrap border-2 border-black rounded-xl hover:bg-gray-100">
-										<div className="md:flex-grow">
-											<h2 className="text-xl font-medium text-[#fb5776] title-font mb-2">{newsletter.fields.title}</h2>
-											<p className="prose line-clamp-2">{newsletter.fields.description}</p>
-										</div>
-									</a>
-								</Link>
-							))}
+							{Object.entries(newsletters)
+								.sort((a, b) => {
+									return b[1].fields.date.localeCompare(a[1].fields.date);
+								})
+								.map(([index, newsletter]) => (
+									<Link key={index} newsletter={newsletter} href={"https:" + newsletter.fields.pdf.fields.file.url}>
+										<a
+											target="blank"
+											className="p-4 flex flex-wrap gap-4 md:flex-nowrap border-2 border-black rounded-xl hover:bg-gray-100">
+											<div className="md:flex-grow">
+												<h2 className="text-xl font-medium text-[#fb5776] title-font mb-2">{newsletter.fields.title}</h2>
+												<p className="prose line-clamp-2">{newsletter.fields.description}</p>
+											</div>
+										</a>
+									</Link>
+								))}
 						</div>
 					) : (
 						<div className="p-4 border-2 border-black mt-4 rounded-xl text-center">No newsletters found</div>
@@ -99,4 +103,4 @@ const Index = ({ newsletters }) => {
 	);
 };
 
-export default Index
+export default Index;
