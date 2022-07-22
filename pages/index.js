@@ -36,7 +36,7 @@ export async function getStaticProps() {
 
 export default function Home({ homepage }) {
 	const stats = [
-		{ stat: "2000+", label: "Tress Planted" },
+		{ stat: "2000+", label: "Trees Planted" },
 		{ stat: "1000+", label: "Children Benefited" },
 		{ stat: "4000+", label: "Pads Distributed" },
 	];

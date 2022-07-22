@@ -29,7 +29,7 @@ const Index = ({ projects }) => {
 		<div>
 			<Head>
 				{/* Genral Tags */}
-				<title>We Rise Together Foundation — Inspire, Aid and Empower</title>
+				<title>We Rise Together Foundation — Campaigns</title>
 				<meta name="title" content="We Rise Together Foundation — Campaigns" />
 				<meta
 					name="description"
@@ -48,7 +48,7 @@ const Index = ({ projects }) => {
 
 				{/* Open Graph */}
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://www.werisetogetherfoundation.org/" />
+				<meta property="og:url" content="https://www.werisetogetherfoundation.org/campaigns" />
 				<meta property="og:title" content="We Rise Together Foundation — Campaigns" />
 				<meta
 					property="og:description"
@@ -59,7 +59,7 @@ const Index = ({ projects }) => {
 
 				{/* Twitter */}
 				<meta property="twitter:card" content="summary_large_image" />
-				<meta property="twitter:url" content="https://www.werisetogetherfoundation.org/" />
+				<meta property="twitter:url" content="https://www.werisetogetherfoundation.org/campaigns" />
 				<meta property="twitter:title" content="We Rise Together Foundation — Campaigns" />
 				<meta
 					property="twitter:description"
