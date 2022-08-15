@@ -25,7 +25,6 @@ export async function getStaticProps() {
 }
 
 const Donate = ({ links }) => {
-	console.log(links);
 	return (
 		<div>
 			<Head>
