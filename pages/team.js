@@ -25,16 +25,7 @@ const Team = ({ team }) => {
 	return (
 		<div>
 			<Head>
-		<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-36SZJWPBZW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-36SZJWPBZW');
-</script>
-				{/* Genral Tags */}
+	{/* Genral Tags */}
 				<title>We Rise Together Foundation — Team</title>
 				<meta name="title" content="We Rise Together Foundation — Team" />
 				<meta
