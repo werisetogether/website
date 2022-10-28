@@ -1,9 +1,9 @@
-import Head from "next/head";
-import React from "react";
-import Layout from "../components/Layout/Layout";
-import Navbar from "../components/Navbar/Navbar";
+import Head from 'next/head';
+import React from 'react'
+import Layout from '../components/Layout/Layout';
+import Navbar from '../components/Navbar/Navbar';
 import { createClient } from "contentful";
-import Image from "next/image";
+import Image from 'next/image';
 
 export async function getStaticProps() {
 	const client = createClient({
@@ -21,8 +21,8 @@ export async function getStaticProps() {
 	};
 }
 
-const Team = ({ team }) => {
-	return (
+const Team = ({team}) => {
+  return (
 		<div>
 			<Head>
 	{/* Genral Tags */}
@@ -71,29 +71,24 @@ const Team = ({ team }) => {
 					<h1 className="text-3xl font-medium text-red-primary text-center">Our Ambassadors</h1>
 				</header>
 				<section className="grid grid-cols-2 md:grid-cols-3 gap-4">
-					{Object.entries(team).map(([index, member]) => {
-						return (
-							!member.fields.isFounder && (
-								<div key={index} className="card shadow-md">
-									<div className="aspect-square w-full relative">
-										<Image
-											src={`http:${member.fields.profilePicture.fields.file.url}`}
-											layout="fill"
-											objectFit="cover"
-											objectPosition="center"
-                      alt="profile"
-                      priority
-										/>
-									</div>
-									<h2 className="text-lg font-medium p-4 truncate text-center">{member.fields.name}</h2>
-								</div>
-							)
-						);
-					})}
+					{Object.entries(team).map(([index, member]) => (
+						<div key={index} className="card shadow-md">
+							<div className="aspect-square w-full relative">
+								<Image
+									src={`http:${member.fields.profilePicture.fields.file.url}`}
+									layout="fill"
+									objectFit="cover"
+									objectPosition="center"
+									alt="profile"
+								/>
+							</div>
+							<h2 className="text-lg font-medium p-4 truncate text-center">{member.fields.name}</h2>
+						</div>
+					))}
 				</section>
 			</Layout>
 		</div>
 	);
-};
+}
 
-export default Team;
+export default Team

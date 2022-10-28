@@ -227,14 +227,12 @@ export default function Home({ homepage }) {
 									<div className="bg-white shadow-md p-6 w-full md:w-2/3">
 										<div className="avatar md:hidden">
 											<div className="w-24 aspect-square relative rounded-full overflow-clip border">
-												{item.fields && (
-													<Image
-														src={`https:${item.fields.profilePicture.fields.file.url}`}
-														layout="fill"
-														objectFit="cover"
-														alt="thumbnail"
-													/>
-												)}
+												<Image
+													src={`https:${item.fields.profilePicture.fields.file.url}`}
+													layout="fill"
+													objectFit="cover"
+													alt="thumbnail"
+												/>
 											</div>
 										</div>
 										<h2 className="text-red-primary text-2xl font-semibold">{item.fields.role}</h2>
