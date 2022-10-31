@@ -45,8 +45,8 @@ const Footer = () => {
 						<p className="text-xl">Quicklinks</p>
 						<div className="grid grid-cols-2 gap-2 mt-4">
 							{Object.entries(menuItems).map(([index, item]) => (
-								<Link key={index} href={item.link}>
-									<a className="hover:underline hover:underline-offset-2">{item.label}</a>
+								<Link key={index} href={item.link} className="hover:underline hover:underline-offset-2">
+									{item.label}
 								</Link>
 							))}
 						</div>

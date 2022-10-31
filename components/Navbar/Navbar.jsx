@@ -14,10 +14,8 @@ const Navbar = () => {
 	return (
 		<div className="navbar bg-base-100 max-w-3xl mx-auto px-4">
 			<div className="flex-1">
-				<Link href="/">
-					<a className="relative w-16 md:w-20 aspect-square">
-						<Image src={Logo} layout="fill" objectFit="contain" alt="WRT" priority quality={70}/>
-					</a>
+				<Link href="/" className="relative w-16 md:w-20 aspect-square">
+					<Image src={Logo} alt="WRT" priority quality={70} />
 				</Link>
 			</div>
 			<nav className="hidden md:flex md:flex-none">

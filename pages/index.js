@@ -9,6 +9,7 @@ import { toast, ToastContainer } from "react-toastify";
 import { createClient } from "contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Link from "next/link";
+import Script from "next/script";
 
 const renderOptions = {
 	renderText: (text) => {
@@ -68,8 +69,8 @@ export default function Home({ homepage }) {
 
 	return (
 		<div>
+			{/* <Script async src="https://www.googletagmanager.com/gtag/js?id=G-36SZJWPBZW" /> */}
 			<Head>
-	
 				{/* Genral Tags */}
 				<title>We Rise Together Foundation — Inspire, Aid and Empower</title>
 				<meta name="title" content="We Rise Together Foundation — Inspire, Aid and Empower" />
@@ -117,8 +118,10 @@ export default function Home({ homepage }) {
 					<div className="order-last md:order-first flex flex-col justify-center">
 						<h1 className="text-4xl font-bold">We Rise Together</h1>
 						<p className="py-6 leading-7">We scale evidence-based programs towards pressing environment and social issues</p>
-						<Link href="/donate">
-							<a className="btn rounded-full w-fit border-transparent bg-gradient-to-b from-[#f96274] to-[#f1896e]">Donate Now</a>
+						<Link
+							href="/donate"
+							className="btn rounded-full w-fit border-transparent bg-gradient-to-b from-[#f96274] to-[#f1896e]">
+							Donate Now
 						</Link>
 					</div>
 					<div className="relative w-full aspect-square">
@@ -182,25 +185,24 @@ export default function Home({ homepage }) {
 						<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 							{Object.entries(homepage.campaigns).map(([index, item]) => (
 								<div key={index} className="relative mt-[6rem]">
-									<div className="rounded-full w-[10rem] aspect-square z-10 absolute -top-20 m-auto left-0 right-0 border border-gray-700 bg-white">
+									<div className="rounded-full w-[10rem] aspect-square z-10 absolute -top-20 m-auto left-0 right-0 border border-gray-700 bg-white overflow-hidden flex flex-col justify-center">
 										<Image
 											src={`https:${item.fields.logo.fields.file.url}`}
-											layout="fill"
-											objectFit="cover"
-											className="rounded-full"
+											width={item.fields.logo.fields.file.details.image.width}
+											height={item.fields.logo.fields.file.details.image.height}
 											alt="thumbnail"
+											className="object-cover h-full"
 										/>
 									</div>
 									<div className="rounded-xl bg-gradient-to-br from-[#f96274] to-[#f1896e] text-white text-center pt-24 px-2 pb-10 shadow-md h-full">
 										<h2 className="capitalize pb-2 font-semibold">{item.fields.title}</h2>
 										<p className="text-sm leading-6">{item.fields.shortDescription}</p>
 									</div>
-									<Link project={item} href={"/campaigns/" + item.fields.slug}>
-										<a
-											type="button"
-											className="rounded-full btn btn-sm w-fit bg-[#853325] border-transparent z-10 absolute -bottom-4 m-auto left-0 right-0">
-											Learn more
-										</a>
+									<Link
+										project={item}
+										href={"/campaigns/" + item.fields.slug}
+										className="rounded-full btn btn-sm w-fit bg-[#853325] border-transparent z-10 absolute -bottom-4 m-auto left-0 right-0">
+										Learn more
 									</Link>
 								</div>
 							))}
@@ -229,8 +231,8 @@ export default function Home({ homepage }) {
 											<div className="w-24 aspect-square relative rounded-full overflow-clip border">
 												<Image
 													src={`https:${item.fields.profilePicture.fields.file.url}`}
-													layout="fill"
-													objectFit="cover"
+													width={item.fields.profilePicture.fields.file.details.image.width}
+													height={item.fields.profilePicture.fields.file.details.image.height}
 													alt="thumbnail"
 												/>
 											</div>
@@ -239,12 +241,12 @@ export default function Home({ homepage }) {
 										<h3 className="text-red-primary pb-4">{item.fields.name}</h3>
 										<div className="text-sm leading-6">{documentToReactComponents(item.fields.description, renderOptions)}</div>
 									</div>
-									<div className="hidden md:flex absolute -bottom-10 right-0 bg-gray-200 w-2/3 h-[12rem] -z-10">
+									<div className="hidden md:flex absolute -bottom-10 right-0 bg-gray-200 w-2/3 h-[12rem] -z-10 overflow-hidden">
 										<div className="aspect-square h-full relative ml-auto">
 											<Image
 												src={`https:${item.fields.profilePicture.fields.file.url}`}
-												layout="fill"
-												objectFit="cover"
+												width={item.fields.profilePicture.fields.file.details.image.width}
+												height={item.fields.profilePicture.fields.file.details.image.height}
 												alt="thumbnail"
 											/>
 										</div>
@@ -252,10 +254,10 @@ export default function Home({ homepage }) {
 								</div>
 							))}
 
-							<Link href="/team">
-								<a className="btn mx-auto px-10 rounded-full w-fit border-transparent bg-gradient-to-b from-[#f96274] to-[#f1896e]">
-									View Team
-								</a>
+							<Link
+								href="/team"
+								className="btn mx-auto px-10 rounded-full w-fit border-transparent bg-gradient-to-b from-[#f96274] to-[#f1896e]">
+								View Team
 							</Link>
 						</div>
 					</section>
@@ -263,7 +265,7 @@ export default function Home({ homepage }) {
 			</Layout>
 			{/* How can you help  */}
 			<section className="h-fit relative bg-slate-100 text-white mt-8">
-				<Image
+				{/* <Image
 					src={homepageFooter}
 					alt="Thumbnail"
 					layout="fill"
@@ -271,7 +273,7 @@ export default function Home({ homepage }) {
 					objectPosition="center"
 					className="z-0"
 					priority
-				/>
+				/> */}
 				<div className="z-10 backdrop-brightness-75 w-full h-full flex flex-col justify-center items-center p-10">
 					<h1 className="text-3xl md:text-5xl font-medium text-center p-4">How can you help</h1>
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
@@ -289,8 +291,8 @@ export default function Home({ homepage }) {
 									We are trying our level best to keep up with our work and to bring happiness through our initiatives but we need
 									your support and kind gestures to move forward.
 								</p>
-								<Link href="/donate">
-									<a className="btn btn-outline rounded-full w-fit mt-6 border-black text-black">Donate now</a>
+								<Link href="/donate" className="btn btn-outline rounded-full w-fit mt-6 border-black text-black">
+									Donate now
 								</Link>
 							</div>
 						</div>
@@ -309,8 +311,10 @@ export default function Home({ homepage }) {
 									We are a big family of passionate volunteers with a common goal in mind. Join our membership to get the get the
 									latets news and to show your support!
 								</p>
-								<Link href="https://docs.google.com/forms/d/e/1FAIpQLSeTeX2zhmKt6GNRetwODA-6rQ5xWQNAoIW3t-BMh7Ih38huqA/viewform">
-									<a className="btn btn-outline rounded-full w-fit mt-6 border-black text-black">Become a Volunteer</a>
+								<Link
+									href="https://docs.google.com/forms/d/e/1FAIpQLSeTeX2zhmKt6GNRetwODA-6rQ5xWQNAoIW3t-BMh7Ih38huqA/viewform"
+									className="btn btn-outline rounded-full w-fit mt-6 border-black text-black">
+									Become a Volunteer
 								</Link>
 							</div>
 						</div>
