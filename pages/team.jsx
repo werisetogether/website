@@ -1,10 +1,9 @@
-import Head from "next/head";
-import React from "react";
+import Head from 'next/head';
+import React from 'react'
+import Layout from '../components/Layout/Layout';
+import Navbar from '../components/Navbar/Navbar';
 import { createClient } from "contentful";
-import Layout from "../../components/Layout/Layout";
-import Navbar from "../../components/Navbar/Navbar";
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
 
 export async function getStaticProps() {
 	const client = createClient({
@@ -12,24 +11,23 @@ export async function getStaticProps() {
 		accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_KEY,
 	});
 
-	const res = await client.getEntries({ content_type: "gallery" });
+	const team = await client.getEntries({ content_type: "team" });
 
 	return {
 		props: {
-			gallery: res.items,
+			team: team.items,
 			revalidate: 10,
 		},
 	};
 }
 
-const Index = ({ gallery }) => {
-	return (
+const Team = ({team}) => {
+  return (
 		<div>
 			<Head>
-	
 				{/* Genral Tags */}
-				<title>We Rise Together Foundation — Gallery</title>
-				<meta name="title" content="We Rise Together Foundation — Gallery" />
+				<title>We Rise Together Foundation — Team</title>
+				<meta name="title" content="We Rise Together Foundation — Team" />
 				<meta
 					name="description"
 					content="We Rise Together scales evidence-based programs towards pressing environmental and social issues."
@@ -47,8 +45,8 @@ const Index = ({ gallery }) => {
 
 				{/* Open Graph */}
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://www.werisetogetherfoundation.org/gallery" />
-				<meta property="og:title" content="We Rise Together Foundation — Gallery" />
+				<meta property="og:url" content="https://www.werisetogetherfoundation.org/team" />
+				<meta property="og:title" content="We Rise Together Foundation — Team" />
 				<meta
 					property="og:description"
 					content="We Rise Together scales evidence-based programs towards pressing environmental and social issues."
@@ -58,8 +56,8 @@ const Index = ({ gallery }) => {
 
 				{/* Twitter */}
 				<meta property="twitter:card" content="summary_large_image" />
-				<meta property="twitter:url" content="https://www.werisetogetherfoundation.org/gallery" />
-				<meta property="twitter:title" content="We Rise Together Foundation — Gallery" />
+				<meta property="twitter:url" content="https://www.werisetogetherfoundation.org/team" />
+				<meta property="twitter:title" content="We Rise Together Foundation — Team" />
 				<meta
 					property="twitter:description"
 					content="We Rise Together scales evidence-based programs towards pressing environmental and social issues."
@@ -69,31 +67,27 @@ const Index = ({ gallery }) => {
 			</Head>
 			<Navbar />
 			<Layout>
-				<header className="py-8 flex flex-col gap-4">
-					<h1 className="text-3xl font-medium text-red-primary">Gallery</h1>
+				<header className="flex flex-col gap-4 py-8">
+					<h1 className="text-3xl font-medium text-center text-red-primary">Our Ambassadors</h1>
 				</header>
-
-				<section className="grid grid-cols-2 md:grid-cols-3 gap-4">
-					{Object.entries(gallery).map(([index, item]) => (
-						<Link key={index} gallery={item} href={"/gallery/" + item.fields.slug}>
-							<a className="card shadow-md">
-								<div className="aspect-square w-full relative">
-									<Image
-										src={`http:${item.fields.pictures[0].fields.file.url}`}
-										layout="fill"
-										objectFit="cover"
-										objectPosition="center"
-										alt="thumbnail"
-									/>
-								</div>
-								<h2 className="text-lg font-medium p-4 truncate text-center">{item.fields.title}</h2>
-							</a>
-						</Link>
+				<section className="grid grid-cols-2 gap-4 md:grid-cols-3">
+					{Object.entries(team).map(([index, member]) => (
+						<div key={index} className="shadow-md card">
+							<div className="relative w-full aspect-square">
+								<Image
+									src={`http:${member.fields.profilePicture.fields.file.url}`}
+									style={{ objectFit: "cover", objectPosition: "center" }}
+									fill
+									alt="profile"
+								/>
+							</div>
+							<h2 className="p-4 text-lg font-medium text-center truncate">{member.fields.name}</h2>
+						</div>
 					))}
 				</section>
 			</Layout>
 		</div>
 	);
-};
+}
 
-export default Index;
+export default Team

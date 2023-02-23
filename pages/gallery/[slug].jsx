@@ -11,39 +11,39 @@ const client = createClient({
 });
 
 export const getStaticPaths = async () => {
-  const res = await client.getEntries({
-    content_type: "gallery",
-  });
+	const res = await client.getEntries({
+		content_type: "gallery",
+	});
 
-  const paths = res.items.map((item) => {
-    return {
-      params: { slug: item.fields.slug },
-    };
-  });
+	const paths = res.items.map((item) => {
+		return {
+			params: { slug: item.fields.slug },
+		};
+	});
 
-  return {
-    paths,
-    fallback: false,
-  };
+	return {
+		paths,
+		fallback: false,
+	};
 };
 
 export const getStaticProps = async ({ params }) => {
-  const { items } = await client.getEntries({
-    content_type: "gallery",
-    "fields.slug": params.slug,
-  });
+	const { items } = await client.getEntries({
+		content_type: "gallery",
+		"fields.slug": params.slug,
+	});
 
-  const donate = await client.getEntries({ content_type: "donationLink" });
+	const donate = await client.getEntries({ content_type: "donationLink" });
 
-  return {
-    props: { gallery: items[0], donate: donate.items },
-    revalidate: 10,
-  };
+	return {
+		props: { gallery: items[0], donate: donate.items },
+		revalidate: 10,
+	};
 };
 
 export default function Index({ gallery, donate }) {
-  const { title, pictures, slug } = gallery.fields;
-  return (
+	const { title, pictures, slug } = gallery.fields;
+	return (
 		<div>
 			<Head>
 				{/* Genral Tags */}
@@ -88,25 +88,23 @@ export default function Index({ gallery, donate }) {
 			</Head>
 			<Navbar />
 			<Layout>
-				<header className="py-8 flex flex-col gap-4">
+				<header className="flex flex-col gap-4 py-8">
 					<h1 className="text-3xl font-medium text-red-primary">Gallery - {title}</h1>
 				</header>
-				<section className="grid gap-2 grid-cols-2 sm:grid-cols-3">
+				<section className="grid grid-cols-2 gap-2 sm:grid-cols-3">
 					{pictures.map((pictures) => (
-						<Link href={"https:" + pictures.fields.file.url} key={pictures.fields.id}>
-							<a target="blank">
-								<div className="w-full aspect-square relative">
-									<Image
-										className="rounded h-full w-full"
-										objectFit="cover"
-										layout="fill"
-										src={"https:" + pictures.fields.file.url}
-										alt={pictures.fields.title}
-										loading="lazy"
-										quality={70}
-									/>
-								</div>
-							</a>
+						<Link href={"https:" + pictures.fields.file.url} key={pictures.fields.id} target="blank">
+							<div className="relative w-full aspect-square">
+								<Image
+									className="w-full h-full rounded"
+									style={{ objectFit: "cover"}}
+									fill
+									src={"https:" + pictures.fields.file.url}
+									alt={pictures.fields.title}
+									loading="lazy"
+									quality={70}
+								/>
+							</div>
 						</Link>
 					))}
 				</section>

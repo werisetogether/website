@@ -26,7 +26,6 @@ const Index = ({ newsletters }) => {
 	return (
 		<div>
 			<Head>
-	
 				{/* Genral Tags */}
 				<title>We Rise Together Foundation — Newsletter</title>
 				<meta name="title" content="We Rise Together Foundation — Newsletter" />
@@ -70,7 +69,7 @@ const Index = ({ newsletters }) => {
 			<ToastContainer />
 			<Navbar />
 			<Layout>
-				<header className="py-8 flex flex-col gap-4">
+				<header className="flex flex-col gap-4 py-8">
 					<h1 className="text-3xl font-medium text-red-primary">WRT Mirror</h1>
 					<p>Check out our newsletter.</p>
 				</header>
@@ -83,20 +82,21 @@ const Index = ({ newsletters }) => {
 									return b[1].fields.date.localeCompare(a[1].fields.date);
 								})
 								.map(([index, newsletter]) => (
-									<Link key={index} newsletter={newsletter} href={"https:" + newsletter.fields.pdf.fields.file.url}>
-										<a
-											target="blank"
-											className="p-4 flex flex-wrap gap-4 md:flex-nowrap border-2 border-black rounded-xl hover:bg-gray-100">
-											<div className="md:flex-grow">
-												<h2 className="text-xl font-medium text-[#fb5776] title-font mb-2">{newsletter.fields.title}</h2>
-												<p className="prose line-clamp-2">{newsletter.fields.description}</p>
-											</div>
-										</a>
+									<Link
+										key={index}
+										newsletter={newsletter}
+										href={"https:" + newsletter.fields.pdf.fields.file.url}
+										target="blank"
+										className="flex flex-wrap gap-4 p-4 border-2 border-black md:flex-nowrap rounded-xl hover:bg-gray-100">
+										<div className="md:flex-grow">
+											<h2 className="text-xl font-medium text-[#fb5776] title-font mb-2">{newsletter.fields.title}</h2>
+											<p className="prose line-clamp-2">{newsletter.fields.description}</p>
+										</div>
 									</Link>
 								))}
 						</div>
 					) : (
-						<div className="p-4 border-2 border-black mt-4 rounded-xl text-center">No newsletters found</div>
+						<div className="p-4 mt-4 text-center border-2 border-black rounded-xl">No newsletters found</div>
 					)}
 				</section>
 			</Layout>
