@@ -7,6 +7,7 @@ import { createClient } from "contentful";
 import Link from "next/link";
 import background from "../public/donate.jpg"
 import Image from "next/image";
+import QR from "../public/QR.jpg";
 
 export async function getStaticProps() {
 	const client = createClient({
@@ -91,6 +92,9 @@ const Donate = ({ links }) => {
 					{Object.entries(links).map(([index, item]) => (
 						<Link key={index} href={item.fields.link}>
 							<a className={`btn ${index == 0 ? " border-transparent bg-red-primary" : " btn-outline"}`}>{item.fields.name}</a>
+							<a className="QR-code">
+								<Image src={QR} alt = "QR-Code" layout = "responsive" objectPosition="center" priority />
+							</a>
 						</Link>
 					))}
 				</section>
