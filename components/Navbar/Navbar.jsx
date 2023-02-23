@@ -12,16 +12,14 @@ const Navbar = () => {
 		{ label: "Contact", link: "/contact" },
 	];
 	return (
-		<div className="navbar bg-base-100 max-w-3xl mx-auto px-4">
+		<div className="max-w-3xl px-4 mx-auto navbar bg-base-100">
 			<div className="flex-1">
-				<Link href="/">
-					<a className="relative w-16 md:w-20 aspect-square">
-						<Image src={Logo} layout="fill" objectFit="contain" alt="WRT" priority quality={70}/>
-					</a>
+				<Link href="/" className="relative w-16 md:w-20 aspect-square">
+					<Image src={Logo} fill style={{ objectFit: "contain" }} alt="WRT" priority quality={70} />
 				</Link>
 			</div>
 			<nav className="hidden md:flex md:flex-none">
-				<ul className="menu menu-horizontal p-0 ">
+				<ul className="p-0 menu menu-horizontal ">
 					{Object.entries(menuItems).map(([index, item]) => (
 						<li key={index} className="">
 							<Link href={item.link}>{item.label}</Link>
@@ -36,7 +34,7 @@ const Navbar = () => {
 							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" />
 						</svg>
 					</label>
-					<ul tabIndex="0" className="menu dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+					<ul tabIndex="0" className="p-2 mt-3 shadow menu dropdown-content bg-base-100 rounded-box w-52">
 						{Object.entries(menuItems).map(([index, item]) => (
 							<li key={index}>
 								<Link href={item.link}>{item.label}</Link>

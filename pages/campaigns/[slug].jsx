@@ -52,7 +52,7 @@ export const getStaticProps = async ({ params }) => {
 };
 
 const Slug = ({ project, donate }) => {
-  const { title, slug, description, donationCta, thumbnail, gallery } = project.fields;
+	const { title, slug, description, donationCta, thumbnail, gallery } = project.fields;
 
 	return (
 		<div>
@@ -99,23 +99,33 @@ const Slug = ({ project, donate }) => {
 			</Head>
 			<Navbar />
 			<Layout>
-				<header className="py-8 flex flex-col gap-4">
+				<header className="flex flex-col gap-4 py-8">
 					<div className="relative w-full h-[20rem] border rounded-xl overflow-clip">
-						<Image src={`https:${thumbnail.fields.file.url}`} alt="thumb" layout="fill" objectFit="cover" priority />
+						<Image
+							src={`https:${thumbnail.fields.file.url}`}
+							alt="thumb"
+							style={{ objectFit: "cover"}}
+							fill
+							priority
+						/>
 					</div>
-					<h1 className="text-3xl text-center font-medium text-red-primary">{title}</h1>
-					<div className="text-center leading-7">{documentToReactComponents(description, renderOptions)}</div>
+					<h1 className="text-3xl font-medium text-center text-red-primary">{title}</h1>
+					<div className="leading-7 text-center">{documentToReactComponents(description, renderOptions)}</div>
 				</header>
 
-				<div className="flex flex-col justify-center items-center">
-					<h1 className="text-3xl font-medium text-center p-4">{donationCta}</h1>
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-						<Link href="/donate">
-							<a className="btn rounded-full w-full border-transparent bg-red-primary">Donate Now</a>
+				<div className="flex flex-col items-center justify-center">
+					<h1 className="p-4 text-3xl font-medium text-center">{donationCta}</h1>
+					<div className="grid items-center grid-cols-1 gap-4 md:grid-cols-2">
+						<Link href="/donate" className="w-full border-transparent rounded-full btn bg-red-primary">
+							Donate Now
 						</Link>
 						{gallery.map((gallery) => (
-							<Link key={gallery.sys.id} gallery={gallery} href={"/gallery/" + gallery.fields.slug}>
-								<a className="btn btn-outline rounded-full w-full border-red-primary">{gallery.fields.title}</a>
+							<Link
+								key={gallery.sys.id}
+								gallery={gallery}
+								href={"/gallery/" + gallery.fields.slug}
+								className="w-full rounded-full btn btn-outline border-red-primary">
+								{gallery.fields.title}
 							</Link>
 						))}
 					</div>

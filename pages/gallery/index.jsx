@@ -1,12 +1,10 @@
 import Head from "next/head";
 import React from "react";
-import { ToastContainer } from "react-toastify";
-import Layout from "../components/Layout/Layout";
-import Navbar from "../components/Navbar/Navbar";
 import { createClient } from "contentful";
-import Link from "next/link";
-import background from "../public/donate.jpg"
+import Layout from "../../components/Layout/Layout";
+import Navbar from "../../components/Navbar/Navbar";
 import Image from "next/image";
+import Link from "next/link";
 
 export async function getStaticProps() {
 	const client = createClient({
@@ -14,25 +12,23 @@ export async function getStaticProps() {
 		accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_KEY,
 	});
 
-	const link = await client.getEntries({ content_type: "donationLink" });
+	const res = await client.getEntries({ content_type: "gallery" });
 
 	return {
 		props: {
-			links: link.items,
+			gallery: res.items,
 			revalidate: 10,
 		},
 	};
 }
 
-const Donate = ({ links }) => {
-	console.log(links);
+const Index = ({ gallery }) => {
 	return (
 		<div>
 			<Head>
-		
 				{/* Genral Tags */}
-				<title>We Rise Together Foundation — Donate</title>
-				<meta name="title" content="We Rise Together Foundation — Donate" />
+				<title>We Rise Together Foundation — Gallery</title>
+				<meta name="title" content="We Rise Together Foundation — Gallery" />
 				<meta
 					name="description"
 					content="We Rise Together scales evidence-based programs towards pressing environmental and social issues."
@@ -50,8 +46,8 @@ const Donate = ({ links }) => {
 
 				{/* Open Graph */}
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://www.werisetogetherfoundation.org/donate" />
-				<meta property="og:title" content="We Rise Together Foundation — Donate" />
+				<meta property="og:url" content="https://www.werisetogetherfoundation.org/gallery" />
+				<meta property="og:title" content="We Rise Together Foundation — Gallery" />
 				<meta
 					property="og:description"
 					content="We Rise Together scales evidence-based programs towards pressing environmental and social issues."
@@ -61,8 +57,8 @@ const Donate = ({ links }) => {
 
 				{/* Twitter */}
 				<meta property="twitter:card" content="summary_large_image" />
-				<meta property="twitter:url" content="https://www.werisetogetherfoundation.org/donate" />
-				<meta property="twitter:title" content="We Rise Together Foundation — Donate" />
+				<meta property="twitter:url" content="https://www.werisetogetherfoundation.org/gallery" />
+				<meta property="twitter:title" content="We Rise Together Foundation — Gallery" />
 				<meta
 					property="twitter:description"
 					content="We Rise Together scales evidence-based programs towards pressing environmental and social issues."
@@ -70,27 +66,24 @@ const Donate = ({ links }) => {
 				<meta property="twitter:image" content="https://i.imgur.com/p68Dwwz.png" />
 				<meta name="twitter:image:alt" content="We Rise Together Foundation" />
 			</Head>
-			<ToastContainer />
 			<Navbar />
-			<header className="h-[20rem] relative bg-slate-100 text-white mb-8">
-				<Image
-					src={background}
-					alt="Thumbnail"
-					layout="fill"
-					objectFit="cover"
-					objectPosition="center"
-					className="z-0"
-					priority
-				/>
-				<div className="z-10 backdrop-brightness-75 w-full h-full flex flex-col justify-center items-center">
-					<h1 className="text-3xl md:text-5xl font-medium text-center p-4">Donate for a better future</h1>
-				</div>
-			</header>
 			<Layout>
-				<section className="grid grid-cols-1 md:grid-cols-2 gap-4">
-					{Object.entries(links).map(([index, item]) => (
-						<Link key={index} href={item.fields.link}>
-							<a className={`btn ${index == 0 ? " border-transparent bg-red-primary" : " btn-outline"}`}>{item.fields.name}</a>
+				<header className="flex flex-col gap-4 py-8">
+					<h1 className="text-3xl font-medium text-red-primary">Gallery</h1>
+				</header>
+
+				<section className="grid grid-cols-2 gap-4 md:grid-cols-3">
+					{Object.entries(gallery).map(([index, item]) => (
+						<Link key={index} gallery={item} href={"/gallery/" + item.fields.slug} className="shadow-md card">
+							<div className="relative w-full aspect-square">
+								<Image
+									src={`http:${item.fields.pictures[0].fields.file.url}`}
+									style={{ objectFit: "cover", objectPosition: "center" }}
+									fill
+									alt="thumbnail"
+								/>
+							</div>
+							<h2 className="p-4 text-lg font-medium text-center truncate">{item.fields.title}</h2>
 						</Link>
 					))}
 				</section>
@@ -99,4 +92,4 @@ const Donate = ({ links }) => {
 	);
 };
 
-export default Donate;
+export default Index;
