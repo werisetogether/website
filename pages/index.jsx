@@ -199,7 +199,7 @@ export default function Home({ homepage }) {
 									<Link
 										project={item}
 										href={"/campaigns/" + item.fields.slug}
-										className="rounded-full btn btn-sm w-fit bg-[#853325] border-transparent z-10 absolute -bottom-4 m-auto left-0 right-0">
+										className="btn rounded-full w-fit border-transparent bg-[#b46152] hover:bg-[#cf8a7e] z-10 absolute -bottom-4 m-auto left-0 right-0 text-white">
 										Learn more
 									</Link>
 								</div>

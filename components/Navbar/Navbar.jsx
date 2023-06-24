@@ -27,8 +27,8 @@ const Navbar = () => {
 					))}
 				</ul>
 			</nav>
-			<div className="flex-none md:hidden">
-				<div className="dropdown dropdown-end">
+			<div className="z-50 flex-none md:hidden">
+				<div className="bg-white dropdown dropdown-end">
 					<label tabIndex="0" className="btn btn-ghost btn-circle">
 						<svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" />
