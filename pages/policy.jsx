@@ -80,7 +80,7 @@ export default function policy({ policies }) {
 			<Layout>
 				<header className="flex flex-col gap-4 py-8">
 					<h1 className="text-3xl font-medium text-red-primary">Policies</h1>
-					<p>Check out our newsletter.</p>
+					<p>View our policies.</p>
 				</header>
 
 				<section>
