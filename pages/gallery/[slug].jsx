@@ -102,7 +102,7 @@ export default function Index({ gallery, donate }) {
 									src={"https:" + pictures.fields.file.url}
 									alt={pictures.fields.title}
 									loading="lazy"
-									quality={70}
+									quality={50}
 								/>
 							</div>
 						</Link>
