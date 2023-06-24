@@ -32,7 +32,6 @@ export async function getStaticProps() {
 }
 
 export default function policy({ policies }) {
-	console.log(policies);
 	return (
 		<div>
 			<Head>
