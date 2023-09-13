@@ -72,8 +72,8 @@ const Team = ({team}) => {
 				</header>
 				<section className="grid grid-cols-2 gap-4 md:grid-cols-3">
 					{Object.entries(team).map(([index, member]) => (
-						<div key={index} className="shadow-md card">
-							<div className="relative w-full aspect-square">
+						<div key={index} className="shadow-md card overflow-clip">
+							<div className="relative w-full overflow-clip aspect-square">
 								<Image
 									src={`http:${member.fields.profilePicture.fields.file.url}`}
 									style={{ objectFit: "cover", objectPosition: "center" }}

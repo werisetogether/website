@@ -36,9 +36,9 @@ export async function getStaticProps() {
 
 export default function Home({ homepage }) {
 	const stats = [
-		{ stat: "2000+", label: "Trees Planted" },
-		{ stat: "1000+", label: "Children Benefited" },
-		{ stat: "4000+", label: "Pads Distributed" },
+		{ stat: "4000+", label: "Trees Planted" },
+		{ stat: "60,000+", label: "Pads Distributed" },
+		{ stat: "1500+", label: "Books Given" },
 	];
 
 	const sendEmail = async (event) => {
