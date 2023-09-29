@@ -48,7 +48,7 @@ const Index = ({ projects }) => {
 
 				{/* Open Graph */}
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://www.werisetogetherfoundation.org/campaigns" />
+				<meta property="og:url" content="https://www.werisetogetherfoundation.com/campaigns" />
 				<meta property="og:title" content="We Rise Together Foundation — Campaigns" />
 				<meta
 					property="og:description"
@@ -59,7 +59,7 @@ const Index = ({ projects }) => {
 
 				{/* Twitter */}
 				<meta property="twitter:card" content="summary_large_image" />
-				<meta property="twitter:url" content="https://www.werisetogetherfoundation.org/campaigns" />
+				<meta property="twitter:url" content="https://www.werisetogetherfoundation.com/campaigns" />
 				<meta property="twitter:title" content="We Rise Together Foundation — Campaigns" />
 				<meta
 					property="twitter:description"
@@ -100,7 +100,7 @@ const Index = ({ projects }) => {
 							<Link
 								project={item}
 								href={"/campaigns/" + item.fields.slug}
-								className="rounded-full btn btn-sm w-fit bg-[#853325] border-transparent z-10 absolute -bottom-4 m-auto left-0 right-0">
+								className="rounded-full btn btn-sm w-fit bg-[#853325] text-white border-transparent z-10 absolute -bottom-4 m-auto left-0 right-0">
 								Learn more
 							</Link>
 						</div>

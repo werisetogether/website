@@ -45,7 +45,7 @@ const Team = ({team}) => {
 
 				{/* Open Graph */}
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://www.werisetogetherfoundation.org/team" />
+				<meta property="og:url" content="https://www.werisetogetherfoundation.com/team" />
 				<meta property="og:title" content="We Rise Together Foundation — Team" />
 				<meta
 					property="og:description"
@@ -56,7 +56,7 @@ const Team = ({team}) => {
 
 				{/* Twitter */}
 				<meta property="twitter:card" content="summary_large_image" />
-				<meta property="twitter:url" content="https://www.werisetogetherfoundation.org/team" />
+				<meta property="twitter:url" content="https://www.werisetogetherfoundation.com/team" />
 				<meta property="twitter:title" content="We Rise Together Foundation — Team" />
 				<meta
 					property="twitter:description"
@@ -68,7 +68,7 @@ const Team = ({team}) => {
 			<Navbar />
 			<Layout>
 				<header className="flex flex-col gap-4 py-8">
-					<h1 className="text-3xl font-medium text-center text-red-primary">Our Ambassadors</h1>
+					<h1 className="text-3xl font-medium text-center text-red-primary">Our Team</h1>
 				</header>
 				<section className="grid grid-cols-2 gap-4 md:grid-cols-3">
 					{Object.entries(team).map(([index, member]) => (

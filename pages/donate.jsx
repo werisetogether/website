@@ -48,7 +48,7 @@ const Donate = ({ links }) => {
 
 				{/* Open Graph */}
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://www.werisetogetherfoundation.org/donate" />
+				<meta property="og:url" content="https://www.werisetogetherfoundation.com/donate" />
 				<meta property="og:title" content="We Rise Together Foundation — Donate" />
 				<meta
 					property="og:description"
@@ -59,7 +59,7 @@ const Donate = ({ links }) => {
 
 				{/* Twitter */}
 				<meta property="twitter:card" content="summary_large_image" />
-				<meta property="twitter:url" content="https://www.werisetogetherfoundation.org/donate" />
+				<meta property="twitter:url" content="https://www.werisetogetherfoundation.com/donate" />
 				<meta property="twitter:title" content="We Rise Together Foundation — Donate" />
 				<meta
 					property="twitter:description"

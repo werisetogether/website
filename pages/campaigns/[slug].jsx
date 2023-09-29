@@ -77,7 +77,7 @@ const Slug = ({ project, donate }) => {
 
 				{/* Open Graph */}
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content={`https://www.werisetogetherfoundation.org/${slug}`} />
+				<meta property="og:url" content={`https://www.werisetogetherfoundation.com/${slug}`} />
 				<meta property="og:title" content={`We Rise Together Foundation — ${title}`} />
 				<meta
 					property="og:description"
@@ -88,7 +88,7 @@ const Slug = ({ project, donate }) => {
 
 				{/* Twitter */}
 				<meta property="twitter:card" content="summary_large_image" />
-				<meta property="twitter:url" content={`https://www.werisetogetherfoundation.org/${slug}`} />
+				<meta property="twitter:url" content={`https://www.werisetogetherfoundation.com/${slug}`} />
 				<meta property="twitter:title" content={`We Rise Together Foundation — ${title}`} />
 				<meta
 					property="twitter:description"

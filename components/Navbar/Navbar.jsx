@@ -7,7 +7,7 @@ const Navbar = () => {
 	const menuItems = [
 		{ label: "Campaigns", link: "/campaigns" },
 		{ label: "Donate", link: "/donate" },
-		{ label: "Newsletter", link: "/newsletter" },
+		{ label: "Newsletter", link: "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7112451500328521728" },
 		{ label: "Team", link: "/team" },
 		{ label: "Contact", link: "/contact" },
 	];

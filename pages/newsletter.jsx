@@ -46,7 +46,7 @@ const Index = ({ newsletters }) => {
 
 				{/* Open Graph */}
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://www.werisetogetherfoundation.org/newsletter" />
+				<meta property="og:url" content="https://www.werisetogetherfoundation.com/newsletter" />
 				<meta property="og:title" content="We Rise Together Foundation — Newsletter" />
 				<meta
 					property="og:description"
@@ -57,7 +57,7 @@ const Index = ({ newsletters }) => {
 
 				{/* Twitter */}
 				<meta property="twitter:card" content="summary_large_image" />
-				<meta property="twitter:url" content="https://www.werisetogetherfoundation.org/newsletter" />
+				<meta property="twitter:url" content="https://www.werisetogetherfoundation.com/newsletter" />
 				<meta property="twitter:title" content="We Rise Together Foundation — Newsletter" />
 				<meta
 					property="twitter:description"

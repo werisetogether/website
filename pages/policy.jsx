@@ -55,7 +55,7 @@ export default function policy({ policies }) {
 
 				{/* Open Graph */}
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://www.werisetogetherfoundation.org/policy" />
+				<meta property="og:url" content="https://www.werisetogetherfoundation.com/policy" />
 				<meta property="og:title" content="We Rise Together Foundation — Policy" />
 				<meta
 					property="og:description"
@@ -66,7 +66,7 @@ export default function policy({ policies }) {
 
 				{/* Twitter */}
 				<meta property="twitter:card" content="summary_large_image" />
-				<meta property="twitter:url" content="https://www.werisetogetherfoundation.org/policy" />
+				<meta property="twitter:url" content="https://www.werisetogetherfoundation.com/policy" />
 				<meta property="twitter:title" content="We Rise Together Foundation — Policy" />
 				<meta
 					property="twitter:description"

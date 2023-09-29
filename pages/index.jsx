@@ -89,7 +89,7 @@ export default function Home({ homepage }) {
 
 				{/* Open Graph */}
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://www.werisetogetherfoundation.org/" />
+				<meta property="og:url" content="https://www.werisetogetherfoundation.com/" />
 				<meta property="og:title" content="We Rise Together Foundation — Inspire, Aid and Empower" />
 				<meta
 					property="og:description"
@@ -100,7 +100,7 @@ export default function Home({ homepage }) {
 
 				{/* Twitter */}
 				<meta property="twitter:card" content="summary_large_image" />
-				<meta property="twitter:url" content="https://www.werisetogetherfoundation.org/" />
+				<meta property="twitter:url" content="https://www.werisetogetherfoundation.com/" />
 				<meta property="twitter:title" content="We Rise Together Foundation — Inspire, Aid and Empower" />
 				<meta
 					property="twitter:description"
