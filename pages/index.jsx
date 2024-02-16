@@ -117,7 +117,7 @@ export default function Home({ homepage }) {
 						<h1 className="text-4xl font-bold">We Rise Together</h1>
 						<p className="py-6 leading-7">We scale evidence-based programs towards pressing environment and social issues</p>
 						<Link
-							href="/donate"
+							href="https://pages.razorpay.com/pl_NZdcuEQUxV3q8e/view"
 							className="btn rounded-full w-fit border-transparent bg-gradient-to-b from-[#f96274] to-[#f1896e]">
 							Donate Now
 						</Link>
