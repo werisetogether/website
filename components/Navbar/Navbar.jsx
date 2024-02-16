@@ -6,7 +6,6 @@ import Logo from "../../public/logo.png";
 const Navbar = () => {
 	const menuItems = [
 		{ label: "Campaigns", link: "/campaigns" },
-		{ label: "Donate", link: "https://pages.razorpay.com/pl_NZdcuEQUxV3q8e/view" },
 		{ label: "Newsletter", link: "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7112451500328521728" },
 		{ label: "Team", link: "/team" },
 		{ label: "Contact", link: "/contact" },
@@ -19,12 +18,19 @@ const Navbar = () => {
 				</Link>
 			</div>
 			<nav className="hidden md:flex md:flex-none">
-				<ul className="p-0 menu menu-horizontal ">
+				<ul className="p-0 menu menu-horizontal">
 					{Object.entries(menuItems).map(([index, item]) => (
 						<li key={index} className="">
 							<Link href={item.link}>{item.label}</Link>
 						</li>
 					))}
+					<li>
+						<Link
+							href={"https://pages.razorpay.com/pl_NZdcuEQUxV3q8e/view"}
+							className="bg-gradient-to-b from-[#f96274] to-[#f1896e]">
+							Donate
+						</Link>
+					</li>
 				</ul>
 			</nav>
 			<div className="z-50 flex-none md:hidden">
@@ -40,6 +46,13 @@ const Navbar = () => {
 								<Link href={item.link}>{item.label}</Link>
 							</li>
 						))}
+						<li>
+							<Link
+								href={"https://pages.razorpay.com/pl_NZdcuEQUxV3q8e/view"}
+								className="bg-gradient-to-r from-[#f96274] to-[#f1896e] inline-block text-transparent bg-clip-text">
+								Donate
+							</Link>
+						</li>
 					</ul>
 				</div>
 			</div>
