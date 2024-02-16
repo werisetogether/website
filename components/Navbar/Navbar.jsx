@@ -27,7 +27,7 @@ const Navbar = () => {
 					<li>
 						<Link
 							href={"https://pages.razorpay.com/pl_NZdcuEQUxV3q8e/view"}
-							className="bg-gradient-to-b from-[#f96274] to-[#f1896e]">
+							className="bg-gradient-to-b from-[#f96274] to-[#f1896e] text-white">
 							Donate
 						</Link>
 					</li>

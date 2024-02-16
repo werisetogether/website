@@ -118,7 +118,7 @@ export default function Home({ homepage }) {
 						<p className="py-6 leading-7">We scale evidence-based programs towards pressing environment and social issues</p>
 						<Link
 							href="https://pages.razorpay.com/pl_NZdcuEQUxV3q8e/view"
-							className="btn rounded-full w-fit border-transparent bg-gradient-to-b from-[#f96274] to-[#f1896e]">
+							className="btn rounded-full w-fit border-transparent bg-gradient-to-b from-[#f96274] to-[#f1896e] text-white">
 							Donate Now
 						</Link>
 					</div>
